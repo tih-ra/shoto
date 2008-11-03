@@ -1,0 +1,19 @@
+<div>
+	<%=tih_date(post.created_at, "float:left;padding-right:10px;")%>  <span class="title_main"><%=link_to post.title, post_path(post), :class=>"title_main"%></span>
+		<%unless post.tag_list.empty?%>
+			
+			<div class="tagsContent">
+				<%=image_tag "icons/tag.gif"%>
+			<% post.tag_counts.each do |tag| %>
+				<%= link_to tag.name, { :controller=>:posts, :action => :tag, :id => tag.name } %>
+			<% end unless post.tag_list.empty?%>
+			</div>
+		<% end %>
+</div>
+<div class="blog_content" style="padding:0; margin:0;">
+	<% if extendet%>
+		<%=white_list(Hpricot(post.content.gsub(/&amp;/, '&')).to_html)  %>
+	<% else %>
+		<%=white_list(cut_text (post.content.gsub(/&amp;/, '&'), post_url(post))) %>
+	<% end %>
+</div>

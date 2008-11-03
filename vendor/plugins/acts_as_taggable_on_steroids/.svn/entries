@@ -1,0 +1,97 @@
+8
+
+dir
+298
+svn://localhost/web/tih-ra/vendor/plugins/acts_as_taggable_on_steroids
+svn://localhost/web
+
+
+
+2008-04-23T11:21:52.079196Z
+285
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+3876a785-e795-dc11-807d-004063eecf1d
+
+test
+dir
+
+Rakefile
+file
+
+
+
+
+2008-05-01T18:23:40.000000Z
+e96aa72bfd70842b3f0e8cf2db0cc343
+2008-04-23T11:21:52.079196Z
+285
+tih
+
+init.rb
+file
+
+
+
+
+2008-05-01T18:23:40.000000Z
+c2e0cc65fe55dfa1de53b6d73ea103ee
+2008-04-23T11:21:52.079196Z
+285
+tih
+
+lib
+dir
+
+CHANGELOG
+file
+
+
+
+
+2008-05-01T18:23:40.000000Z
+41af26c41437a94f4a7af76535935427
+2008-04-23T11:21:52.079196Z
+285
+tih
+
+generators
+dir
+
+MIT-LICENSE
+file
+
+
+
+
+2008-05-01T18:23:40.000000Z
+4143f4eef4987df3fdaaa8ce839a5d18
+2008-04-23T11:21:52.079196Z
+285
+tih
+
+README
+file
+
+
+
+
+2008-05-01T18:23:40.000000Z
+06e3b05e819a1fc4b03aa55f8303433f
+2008-04-23T11:21:52.079196Z
+285
+tih
+

@@ -1,0 +1,18 @@
+<!--BLOCK START-->
+<div class="boxDarkGray">
+    <b class="r5"></b><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b>
+	<div class="inner-box">
+<!--//BLOCK START-->
+		<h2>EDIT PERSONAL INFO</h2>
+		<% form_for :personal_info, :url => manage_personal_info_path, :html=>{:method=>:put} do |f| -%>
+		<label for="post_title">Info</label><br/>
+		<%= f.text_area :content, :class=>"blog" %><br/>
+		<%= submit_tag "Сохранить", :class=>"submit" %>
+		<% end %>
+<!--BLOCK END-->
+		
+	<div class="clear-10">&nbsp;</div>
+</div>
+<b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b><b class="r5"></b>
+</div>
+<!--//BLOCK END-->

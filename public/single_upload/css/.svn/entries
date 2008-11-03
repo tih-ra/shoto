@@ -1,0 +1,54 @@
+8
+
+dir
+298
+svn://localhost/web/tih-ra/public/single_upload/css
+svn://localhost/web
+
+
+
+2008-05-07T12:03:51.218860Z
+298
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+3876a785-e795-dc11-807d-004063eecf1d
+
+form.css
+file
+
+
+
+
+2008-05-07T12:05:09.000000Z
+1297057fcd8d72cc572d9ff94e59656c
+2008-05-07T12:03:51.218860Z
+298
+tih
+has-props
+
+default.css
+file
+
+
+
+
+2008-05-07T12:05:09.000000Z
+38faefffd8cc3a551782a97b2725f712
+2008-05-07T12:03:51.218860Z
+298
+tih
+has-props
+

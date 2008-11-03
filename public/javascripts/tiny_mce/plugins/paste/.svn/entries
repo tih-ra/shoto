@@ -1,0 +1,102 @@
+8
+
+dir
+298
+svn://localhost/web/tih-ra/public/javascripts/tiny_mce/plugins/paste
+svn://localhost/web
+
+
+
+2008-04-23T11:21:52.079196Z
+285
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+3876a785-e795-dc11-807d-004063eecf1d
+
+editor_plugin.js
+file
+
+
+
+
+2008-05-01T18:23:45.000000Z
+2a7d486165eeac4186b45f8877429085
+2008-04-23T11:21:52.079196Z
+285
+tih
+has-props
+
+pasteword.htm
+file
+
+
+
+
+2008-05-01T18:23:45.000000Z
+233df20363a5cceb1809304d2d511b43
+2008-04-23T11:21:52.079196Z
+285
+tih
+has-props
+
+langs
+dir
+
+editor_plugin_src.js
+file
+
+
+
+
+2008-05-01T18:23:45.000000Z
+d0977014c9983e26157d04fa4a7009de
+2008-04-23T11:21:52.079196Z
+285
+tih
+has-props
+
+css
+dir
+
+pastetext.htm
+file
+
+
+
+
+2008-05-01T18:23:45.000000Z
+afa1e88582481db6f694f9182d213d4f
+2008-04-23T11:21:52.079196Z
+285
+tih
+has-props
+
+js
+dir
+
+blank.htm
+file
+
+
+
+
+2008-05-01T18:23:45.000000Z
+a2d0c28094dce874e165a7779426ed35
+2008-04-23T11:21:52.079196Z
+285
+tih
+has-props
+

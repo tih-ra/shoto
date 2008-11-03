@@ -1,0 +1,10 @@
+<div style="float:left;">
+<!--BLOCK START-->
+		<div style="padding:10px;">
+		<h3 class="light">CONTACTS</h3>
+		<span class="title">Email & GTalk: <%=mail_to "info@tihra.name"%></stan><br/>
+		<span class="title">MySpace: <%=link_to "http://myspace.com/tihra", "http://myspace.com/tihra"%></stan><br/>
+		
+</div>
+<!--//BLOCK END-->
+</div>

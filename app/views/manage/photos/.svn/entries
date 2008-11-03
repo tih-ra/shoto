@@ -1,0 +1,52 @@
+8
+
+dir
+298
+svn://localhost/web/tih-ra/app/views/manage/photos
+svn://localhost/web
+
+
+
+2008-04-23T11:21:52.079196Z
+285
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+3876a785-e795-dc11-807d-004063eecf1d
+
+edit.html.erb
+file
+
+
+
+
+2008-05-01T18:23:34.000000Z
+c1e4009f9089dbebbabb14575de47225
+2008-04-23T11:21:52.079196Z
+285
+tih
+
+update.rjs
+file
+
+
+
+
+2008-05-01T18:23:34.000000Z
+4694b572e25c2484ebf9824ae0e775e4
+2008-04-23T11:21:52.079196Z
+285
+tih
+

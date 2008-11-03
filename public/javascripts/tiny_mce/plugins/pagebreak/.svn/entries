@@ -1,0 +1,60 @@
+8
+
+dir
+298
+svn://localhost/web/tih-ra/public/javascripts/tiny_mce/plugins/pagebreak
+svn://localhost/web
+
+
+
+2008-04-23T11:21:52.079196Z
+285
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+3876a785-e795-dc11-807d-004063eecf1d
+
+editor_plugin.js
+file
+
+
+
+
+2008-05-01T18:23:42.000000Z
+bdb78ef589d569d831d2beec4339aa0b
+2008-04-23T11:21:52.079196Z
+285
+tih
+has-props
+
+editor_plugin_src.js
+file
+
+
+
+
+2008-05-01T18:23:42.000000Z
+b673d5e82ae627995e67bb9cef800689
+2008-04-23T11:21:52.079196Z
+285
+tih
+has-props
+
+css
+dir
+
+img
+dir
+

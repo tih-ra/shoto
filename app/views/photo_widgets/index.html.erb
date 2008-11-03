@@ -1,0 +1,20 @@
+<%=render :partial => "/photo_widgets/swfuploader_call"%>
+<% panelSize = params[:panel_size] ? params[:panel_size] : 600%>
+<div style="width:<%=(panelSize.to_i+25).to_s%>px;background:#ffffff;float:left;">
+	<div style="padding:15px;float:left;">
+		<div style="width:600px;float:left;text-align:left;">
+			<span class="micro" style="color:#BBBBBB;font-size:12px;">Одновременно выбрать несколько загружаемых файлов, возможно, удерживая клавиши Shift или Ctrl.</span>
+		</div>
+		<div style="float:right;width:50px;margin-bottom:5px;" id="widget_pager">
+			<%=render :partial => "widget_pager", :object => @photos, :locals=>{:assetable_id => params[:assetable_id]}%>
+		</div>
+		<div id="photo_thumbs" style="width:<%=panelSize%>px;">
+			<%=render :partial => "widget_photo_thumb", :collection => @photos%>
+		
+		</div>
+	</div>
+	<div style="padding-right:15px;float:right;heigth:25px;padding-bottom:10px;">
+		<%=submit_tag "add photos", :onclick=>"upload1.selectFiles();return false;", :class=>"submit button"%>
+		<%=submit_tag "cancel", :id=>'btnCancel1', :onClick=>'cancelQueue(upload1);return hs.close(this);', :class=>"submit button"%>
+	</div>
+</div>

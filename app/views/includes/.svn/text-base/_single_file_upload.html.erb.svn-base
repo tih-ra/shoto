@@ -1,0 +1,53 @@
+<link href="/single_upload/css/default.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/single_upload/swfupload/swfupload.js"></script>
+<script type="text/javascript" src="/single_upload/js/swfupload.graceful_degradation.js"></script>
+<script type="text/javascript" src="/single_upload/js/fileprogress.js"></script>
+<script type="text/javascript" src="/single_upload/js/handlers.js"></script>
+<script type="text/javascript">
+		var swfu;
+		window.onload = function () {
+			swfu = new SWFUpload({
+				// Backend settings
+				upload_url: "<%=upload_url%>",	// Relative to the SWF file, you can use an absolute URL as well.
+				file_post_name: "Filedata",
+				post_params: {"user_id" : "<%=current_user.id%>", "assetable_type" : "<%=assetable_type%>", "assetable_id" : "<%=assetable_id%>"},
+				// Flash file settings
+				file_size_limit : "102400",	// 10 MB
+				file_types : "*.*",	// or you could use something like: "*.doc;*.wpd;*.pdf",
+				file_types_description : "All Files",
+				file_upload_limit : "0", // Even though I only want one file I want the user to be able to try again if an upload fails
+				file_queue_limit : "1", // this isn't needed because the upload_limit will automatically place a queue limit
+
+				// Event handler settings
+				swfupload_loaded_handler : swfUploadLoaded,
+				
+				//file_dialog_start_handler : fileDialogStart,		// I don't need to override this handler
+				file_queued_handler : fileQueued,
+				file_queue_error_handler : fileQueueError,
+				file_dialog_complete_handler : fileDialogComplete,
+				
+				//upload_start_handler : uploadStart,	// I could do some client/JavaScript validation here, but I don't need to.
+				upload_progress_handler : uploadProgress,
+				upload_error_handler : uploadError,
+				upload_success_handler : uploadSuccess,
+				upload_complete_handler : uploadComplete,
+
+				// Flash Settings
+				flash_url : "/single_upload/swfupload/swfupload_f9.swf",	// Relative to this file
+
+				// UI settings
+				swfupload_element_id : "flashUI",		// setting for the graceful degradation plugin
+				degraded_element_id : "degradedUI",
+
+				custom_settings : {
+					progress_target : "fsUploadProgress",
+					upload_successful : true
+				},
+				
+				// Debug settings
+				debug: false
+			});
+
+		};
+	</script>
+

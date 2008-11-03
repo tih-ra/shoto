@@ -1,0 +1,6 @@
+<ul class="country">
+<% for country in @countries do -%>
+  <li class="country"><div class="image"><img src="/images/flags/<%=country.code? ? country.code.downcase : 'europeanunion' %>.png"></div><div class="name"><%=h country.name%></div>
+  </li>
+<% end -%>
+</ul>

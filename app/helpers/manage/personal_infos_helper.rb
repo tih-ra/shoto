@@ -1,0 +1,2 @@
+module Manage::PersonalInfosHelper
+end

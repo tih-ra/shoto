@@ -1,0 +1,19 @@
+<div class="posterListItem">
+	<div class="content">
+		<%=frendid_date(album.created_at, "datesBlock")%>
+		<div class="titles">
+			<span class="time"><%=album.updated_at.to_s(:time)%></span>, 
+			<span class="city">Обновление</span><br>
+			<%=link_to album.title, manage_album_path(album), :class=>"title" %>
+		</div>
+		<div class="cover"><div class="coverDiv">
+			<%=link_to image_tag(album_cover(album), :style=>"width:200px;"), manage_album_path(album)%>
+		</div></div>
+		<div class="bottomInfo">
+			<div class="commentsBubble" title="количество комментариев">42</div>
+			<div class="number"><%= album.photos.count%></div>
+			<div class="clear-1">&nbsp;</div>
+		</div>
+		<%=link_to album.user.login, user_path(album.user)%>
+	</div>
+</div>

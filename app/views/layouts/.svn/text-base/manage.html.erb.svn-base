@@ -1,0 +1,20 @@
+<%=render :partial => "includes/header"%>
+<div class="column span-24 first last">
+<div class="clear-10">&nbsp;</div>		
+		<div class="boxGray">
+		    <b class="r5"></b><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b>
+			<div class="inner-box" >
+				<div style="float:left;">
+					<div class="column span-3 first">
+						<%=render :partial => "includes/toolbox"%>
+					</div>
+					<div class="column span-20 last">
+						<%=yield%>
+					</div>
+				</div>
+				<div class="clear-10">&nbsp;</div>
+			</div>
+			<b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b><b class="r5"></b>
+		</div>
+</div>
+<%=render :partial => "includes/footer"%>

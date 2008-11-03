@@ -1,0 +1,88 @@
+8
+
+dir
+298
+svn://localhost/web/tih-ra
+svn://localhost/web
+
+
+
+2008-05-07T12:03:51.218860Z
+298
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+3876a785-e795-dc11-807d-004063eecf1d
+
+test
+dir
+
+app
+dir
+
+tmp
+dir
+
+tools
+dir
+
+log
+dir
+
+Rakefile
+file
+
+
+
+
+2008-05-01T18:23:48.000000Z
+17f2f134da4cd31ea095d5868ca89e86
+2008-04-17T17:00:44.467567Z
+279
+tih
+
+script
+dir
+
+config
+dir
+
+db
+dir
+
+doc
+dir
+
+lib
+dir
+
+vendor
+dir
+
+README
+file
+
+
+
+
+2008-05-01T18:23:48.000000Z
+d6c1fbcf028923cc0480fff4ab459a21
+2008-04-17T17:00:44.467567Z
+279
+tih
+
+public
+dir
+

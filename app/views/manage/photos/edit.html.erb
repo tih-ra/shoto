@@ -1,0 +1,6 @@
+<div class="align-center"><%=link_to_remote image_tag("rotatemini-l.gif"), :url=>manage_photo_path(@photo)+'?direction=left', :method=>:put %>  <%=link_to_remote image_tag("rotatemini-r.gif"), :update=>"album_photo_item", :url=>manage_photo_path(@photo)+'?direction=right', :method=>:put %>  <%=link_to image_tag("icons/close.png", :style=>"width:16px;height:16px;"), manage_photo_path(@photo), :method=>:delete, :confirm => "Ты действительно хочешь удалить фотографию?" %> </div>
+<div class="align-center" id="album_photo_item<%=@photo.id%>">
+	<%=image_tag @photo.public_filename(:thumb), :size=>'176x132'%>
+</div>
+
+<table border="0" cellpadding="0" cellspacing="0"></table>

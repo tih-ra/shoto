@@ -1,0 +1,34 @@
+<script>
+	function add_album() {
+		if ($('add_album').style.display=="none") {
+			$('add_album').show();
+			$('add_album_control').removeClassName('down');
+			$('add_album_control').addClassName('up');
+			
+		} else {
+			$('add_album').hide();
+			$('add_album_control').removeClassName('up');
+			$('add_album_control').addClassName('down');
+			$('add_album_select').value = '';
+		}
+	}
+</script>
+<div style="width:300px;">
+	<!--BLOCK START-->
+	<div class="boxLightGray">
+		<b class="rl5"></b><b class="rl4"></b><b class="rl3"></b><b class="rl2"></b><b class="rl1"></b>
+		<div class="inner-boxl">
+			<!--//BLOCK START-->
+			<ul class="down" id="add_album_control"><li><%=link_to_function "добавить альбом", "add_album();"%></li></ul>
+			<div style="padding:10px;display:<%=@album ? 'block' : 'none'%>;" id="add_album">
+				<% fields_for :album do |af| %>
+				<%= af.collection_select(:id, current_user.albums, "id", "title", {:include_blank => '----'}, {:style=>"width:220px", :id=>"add_album_select"}) %>
+				<% end %>
+			</div>
+			<!--BLOCK END-->
+			<div class="clear-10">&nbsp;</div>
+		</div>
+		<b class="rl1"></b><b class="rl2"></b><b class="rl3"></b><b class="rl4"></b><b class="rl5"></b>
+	</div>
+	<!--//BLOCK END-->
+</div>

@@ -1,0 +1,11 @@
+<%=link_to image_tag(((params[:controller]=="welcome" or (params[:controller]=="posts" and !@event and params[:action]!="reports")) ? "buttons/blog-in.gif" : "buttons/blog.gif")), "/"%>
+<% unless params[:controller]=="posts"%>
+	<%=link_to image_tag("buttons/reports.gif"), {:controller=>:posts, :action=>:reports, :id=>"all"}%>
+	<% else %>
+	<%=link_to image_tag(((params[:action]=="reports" or (params[:controller]=="posts" and @event)) ? "buttons/reports-in.gif" : "buttons/reports.gif")), {:controller=>:posts, :action=>:reports, :id=>"all"}%>
+<% end %>
+<%=link_to image_tag((params[:controller]=="events" ? "buttons/events-in.gif" : "buttons/events.gif")), events_path%>
+<%=link_to image_tag((params[:controller]=="freeze_frames" ? "buttons/freeze_frames-in.gif" : "buttons/freeze_frames.gif")), freeze_frames_path%>
+<%=link_to image_tag((params[:controller]=="videos" ? "buttons/video-in.gif" : "buttons/video.gif")), videos_path%>
+
+<%#=link_to image_tag((params[:controller]=="contacts" ? "buttons/contact-in.gif" : "buttons/contact.gif")), contacts_path%>

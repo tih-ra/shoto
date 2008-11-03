@@ -1,0 +1,171 @@
+<!--SS PRO MESSAGES-->
+<div id="messenger-wrap" class="dialogue-wrap"style="display:none;"><div class="dialogue"><div class="dialogue-content"><div class="wrap">			<p id="messenger-p" class="clearfix">
+			<span class="accept" id="messenger-span">test</span>
+			<span id="progress_wrap" style="display:none;"><span id="progress_container"><span id="progress"></span></span></span>
+			</p>
+		</div></div></div></div>		
+		<div id="helper" style="display:none;">
+			<p>&nbsp;</p>
+
+		</div>
+		<div id="pop-image" style="display:none;">
+			<ul>
+				<li><span id="filename">50</span></li>
+				<li>Uploaded on <span id="uploaded-on">date</span></li>
+				<li>Part of the "<span id="part-of">album</span>" album</li>
+
+			</ul>
+		</div>
+		<div id="dummy" style="display:none;"></div>
+
+<!--END SS PRO MESSAGES-->	
+
+
+
+<script type="text/javascript" src="http://director/app/webroot/js/upload_1192727816.js"></script>
+
+	
+	
+	
+		<div class="left-col">
+			
+			<div class="left-col-inside">
+
+				<div id="uploader" class="left" style="display:none;">
+
+					<div class="module">
+
+						<div class="module-head">
+
+							<h3>Add content</h3>
+						</div>
+
+						<div class="wrap">
+
+							<div class="content">
+
+							<p>Use the browse button below to select files for upload. You can select as many files at once as you like.							</p>
+
+							<fieldset class="embed">
+
+								Browse for:								<select id="upload_type">
+									<option value="1">Content</option>
+									<option value="3">Album preview</option>
+									<option value="4">Album audio</option>
+								</select> 
+								&nbsp;&nbsp;
+								<input class="nomargin" id="browser" disabled="false" type="button" onclick="browse_for_upload(); return false;" value="Browse" />
+
+							</fieldset>
+
+							<span class="note"><strong>Note</strong>: Your server limits the size of uploaded files to 32MB per file. <a href="http://forums.slideshowpro.net/viewtopic.php?id=56" >Click here</a> to find out how to increase your upload limit.</span>
+
+							</div> <!--close content-->
+
+						</div> <!--close wrap-->
+
+						<div class="module-footer">
+							<div>&nbsp;</div>
+						</div>
+
+					</div> <!--close module-->
+
+				</div> <!--close uploader-->
+
+				
+			</div> <!--close left-col-inside-->
+
+		</div> <!--close left-col-->
+
+		<div class="right-col">
+			
+			<div class="right-col-inside">
+fil
+				<div id="files" style="display:none;">
+		
+					<div class="module">
+
+						<div class="module-head">
+
+							<h3>File list</h3>
+						</div>
+
+						<div class="wrap">
+
+							<div class="content">
+
+							<div class="embed">
+
+								<p>You have selected the following images for upload.<br />(<span id="summary"></span>)</p>
+
+								<fieldset><input id="upload_btn" type="button" onclick="upload(); return false;" value="Upload" /></fieldset>
+								
+								<div id="file_list"></div>
+								
+							</div>
+
+							</div> <!--close content-->
+
+						</div> <!--close wrap-->
+
+						<div class="module-footer">
+
+							<div>&nbsp;</div>
+						</div>
+
+					</div> <!--close module-->
+			
+				</div> <!--close files-->
+fil				
+			</div> <!--close right-col-inside-->
+	
+		</div> <!--close right-col-->
+
+		<div id="viewer" class="left"><h3 class="error">Error</h3><p>Director's uploader requires you have version 8 (or higher) of the Flash plugin installed. <a href="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" title="Install the latest flash player">Click here</a> to install the latest version of the Flash plugin.</p></div>
+
+		<script type="text/javascript">
+			// <![CDATA[
+			var swf = new SWFObject("http://director/app/webroot/swf/upload.swf?nhsdhadfsd1.1.4", "_uploader", "1", "1", "8", "#292929");
+			swf.addVariable("aid", 3);
+			swf.addVariable("dash", 0);
+			swf.addVariable("max_size", 33554432);
+			swf.addVariable("upload_url", '/index.php?/uploads/image/1');
+			swf.addParam("allowScriptAccess", "always");
+			swf.write("viewer");
+	
+			var test = $('viewer').innerHTML;
+			if (test.substring(0,2).toLowerCase() != '<h') {
+				$('browser').disabled = false;
+				Element.show('uploader');
+			}
+			// ]]>
+		</script>
+
+		
+				
+	</div> <!--close col-wrap-->
+
+</div> <!--close container-wrap-->	
+		<div id="container-footer">
+			<div>&nbsp;</div>
+		</div>
+
+	
+		<div id="footer">
+	<span>
+	<strong>SlideShowPro Director 1.1.4</strong>
+
+		&copy; 2005-2007 Bradleyboy Productions LLC and Dominey Design Inc. All Rights Reserved. 
+	<a href="http://slideshowpro.net/downloads/userguide/ssp_dir/Dir_User_Guide.pdf" title="User Guide">User Guide</a> / 
+	<a href="http://forums.slideshowpro.net/" title="Forums">Forums</a> / <a href="http://slideshowpro.net" title="SlideShowPro">SlideShowPro</a>
+	</span>
+</div>		
+		<iframe id="hidden" name="hidden" style="width:0; height:0;"></iframe>
+		
+		<div id="flash-container"></div>
+
+		<script type="text/javascript">
+			var swf = new SWFObject("http://director/app/webroot/swf/clipboard.swf?1.1.4", "_clip", "1", "1", "8", "#292929");
+			swf.addParam("allowScriptAccess", "always");
+			swf.write("flash-container");
+		</script>

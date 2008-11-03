@@ -1,0 +1,25 @@
+<script type="text/javascript">    
+    hs.graphicsDir = 'stylesheets/highslide/graphics/';
+    hs.outlineType = 'rounded-white';
+
+</script>
+
+<div class="column span-17 first">
+<div class="column span-17 first last">
+	<div class="column span-5"><%=image_tag "pl_freezy_frames.gif"%></div>
+	<div class="column span-11"><%=will_paginate @photos%>&nbsp;</div>
+</div>
+<div class="clear-1">&nbsp;</div>
+<% @photos.each do |photo|%>
+<div class="freeze_frame_thumb"><%=link_to image_tag(photo.public_filename(:thumb)), photo.public_filename(:content), :onclick=>"return hs.expand(this)", :class=>"highslide"%></div>
+<% end unless @photos.empty?%>
+</div>
+<div class="column span-6 last">
+	<%=render :partial => "includes/top_posts"%>
+	<div class="clear-10">&nbsp;</div>
+	<%=render :partial => "includes/events"%>
+	<div class="clear-10">&nbsp;</div>
+	<%=render :partial => "includes/tags_posts"%>
+	<div class="clear-10">&nbsp;</div>
+	<%=render :partial => "includes/contacts"%>
+</div>

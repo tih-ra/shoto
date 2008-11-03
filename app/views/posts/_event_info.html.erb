@@ -1,0 +1,15 @@
+<div style="float:left;">
+<!--BLOCK START-->
+<div class="boxLightGray">
+	<b class="rl5"></b><b class="rl4"></b><b class="rl3"></b><b class="rl2"></b><b class="rl1"></b>
+	<div class="inner-boxl">
+		<div style="padding:10px;">
+			<span class="title_events"><strong>Report:</strong> <%=@event.title%> @ <%=@event.place%> (<%=@event.geography%>) [<%=@event.start_at.to_s(:time)%>]</span>&nbsp;<%=link_to image_tag("icons/info.png"), @event.info_url, :target=>"_new" unless @event.info_url.blank?%>
+		<!--BLOCK END-->
+		</div>
+		<div class="clear-10">&nbsp;</div>
+	</div>
+	<b class="rl1"></b><b class="rl2"></b><b class="rl3"></b><b class="rl4"></b><b class="rl5"></b>
+</div>
+<!--//BLOCK END-->
+</div>

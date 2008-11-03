@@ -1,0 +1,22 @@
+	<!--BLOCK START-->
+	<div class="boxLightGray">
+		<b class="rl5"></b><b class="rl4"></b><b class="rl3"></b><b class="rl2"></b><b class="rl1"></b>
+		<div class="inner-boxl">
+			<!--//BLOCK START-->
+			<div style="padding:10px;">
+			<%=tih_date(event.start_at, "float:left;")%>
+			<div id="manage_event_item">
+				<span class="title_list"><%=event.title%> @ <%=event.place%> (<%=event.geography%>) [<%=event.start_at.to_s(:time)%>]</span>&nbsp;<%= event.posts.empty? ? '' : image_tag("icons/attach.png")%>&nbsp;<%=link_to image_tag("icons/info.png"), event.info_url, :target=>"_new" unless event.info_url.blank?%>
+			</div>
+			<div id="manage_event_delete">
+					<%=link_to image_tag("icons/edit.gif"), edit_manage_event_path(event) %>
+				&nbsp;<%=link_to image_tag("icons/delete.gif"), manage_event_path(event), :method=>:delete, :confirm => "Ты действительно хочешь удалить event?" %>
+			</div>
+			</div>
+			<!--BLOCK END-->
+			<div class="clear-10">&nbsp;</div>
+		</div>
+		<b class="rl1"></b><b class="rl2"></b><b class="rl3"></b><b class="rl4"></b><b class="rl5"></b>
+	</div>
+	<!--//BLOCK END-->
+	<div class="clear-10">&nbsp;</div>

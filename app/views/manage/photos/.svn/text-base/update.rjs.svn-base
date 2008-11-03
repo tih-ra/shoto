@@ -1,0 +1,2 @@
+page.replace_html "album_photo_item#{@photo.id}", "<img src='#{@photo.public_filename(:thumb)}?#{Time.now}'>"
+page.call "rotateThumb", "image_#{@photo.id}", "#{@photo.public_filename(:middle)}?#{Time.now}"

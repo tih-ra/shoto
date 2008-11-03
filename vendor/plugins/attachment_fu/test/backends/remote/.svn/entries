@@ -1,0 +1,40 @@
+8
+
+dir
+298
+svn://localhost/web/tih-ra/vendor/plugins/attachment_fu/test/backends/remote
+svn://localhost/web
+
+
+
+2008-04-23T11:21:52.079196Z
+285
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+3876a785-e795-dc11-807d-004063eecf1d
+
+s3_test.rb
+file
+
+
+
+
+2008-05-01T18:23:35.000000Z
+d2b1be7105173462e4056b32eb9a88f6
+2008-04-23T11:21:52.079196Z
+285
+tih
+

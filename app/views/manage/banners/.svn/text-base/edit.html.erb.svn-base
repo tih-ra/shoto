@@ -1,0 +1,19 @@
+<!--BLOCK START-->
+<div class="boxDarkGray">
+    <b class="r5"></b><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b>
+	<div class="inner-box">
+<!--//BLOCK START-->
+		<h2>EDIT BANNER <%=@banner.title%></h2>
+		<% form_for :banner, :url => manage_banner_path(@banner), :html=>{:method=>:put} do |f| -%>
+		<label for="post_title">Название</label><br/>
+		<%= f.text_field :title, :class=>"blog" %><br/>
+		<label for="post_title">Баннер код</label><br/>
+		<%= f.text_area :content, :class=>"banner" %><br/>
+		<%= submit_tag "Сохранить", :class=>"submit" %>
+		<% end %>
+<!--BLOCK END-->
+	<div class="clear-10">&nbsp;</div>
+</div>
+<b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b><b class="r5"></b>
+</div>
+<!--//BLOCK END-->

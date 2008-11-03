@@ -1,0 +1,82 @@
+8
+
+dir
+48
+http://rubyizumi.googlecode.com/svn/trunk
+http://rubyizumi.googlecode.com/svn
+
+
+
+2008-05-08T19:23:47.994537Z
+45
+takuma104
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+0af54733-fd48-0410-9cb7-ad015ecf8501
+
+LICENSE.txt
+file
+
+
+
+
+2008-08-30T05:07:29.000000Z
+108322602bb857915803a84e23a2cc2f
+2008-03-22T03:31:56.122966Z
+2
+takuma104
+
+AUTHORS.txt
+file
+
+
+
+
+2008-08-30T05:07:29.000000Z
+0b5c8b9705ebb8818fb108df546c24c9
+2008-05-02T11:22:21.845946Z
+28
+takuma104
+
+lib
+dir
+
+server.rb
+file
+
+
+
+
+2008-08-30T05:07:29.000000Z
+65f408da243ef68d5dd66213406d5cc0
+2008-05-08T17:50:02.014990Z
+43
+takuma104
+
+README.txt
+file
+
+
+
+
+2008-08-30T05:07:29.000000Z
+76a19c95476056d9d6b13eb4e9c1c4e0
+2008-05-02T11:22:21.845946Z
+28
+takuma104
+
+player
+dir
+

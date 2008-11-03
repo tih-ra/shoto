@@ -1,0 +1,5 @@
+<% if @photos.page_count > 1%>
+<%= link_to_remote image_tag("arrows/left2.png"), :url =>{ :controller => '/photo_widgets', :action=>'index', :assetable_id => params[:assetable_id], :assetable_type => params[:assetable_type] ,:page=>@photos.previous_page } %> <%= link_to_remote image_tag("arrows/right2.png"), :url =>{ :controller => '/photo_widgets', :action=>'index', :assetable_id => params[:assetable_id], :assetable_type => params[:assetable_type], :page=>@photos.next_page } %>
+<% else %>
+<%=image_tag("spacer.gif", :size=>'5x5')%>
+<% end %>

@@ -1,0 +1,2 @@
+page[:photo_thumbs].replace_html :partial => 'widget_photo_thumb', :collection => @photos 
+page[:widget_pager].replace_html :partial => 'widget_pager', :object => @photos

@@ -1,0 +1,55 @@
+8
+
+dir
+298
+svn://localhost/web/tih-ra/lib
+svn://localhost/web
+
+
+
+2008-04-23T11:21:52.079196Z
+285
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+3876a785-e795-dc11-807d-004063eecf1d
+
+authenticated_test_helper.rb
+file
+
+
+
+
+2008-05-01T18:23:35.000000Z
+d0ca5663f200a5f7c1e5a8c9720f2a98
+2008-04-23T11:21:52.079196Z
+285
+tih
+
+tasks
+dir
+
+authenticated_system.rb
+file
+
+
+
+
+2008-05-01T18:23:35.000000Z
+f0ac102c12ce161710d6bc848bd7a798
+2008-04-23T11:21:52.079196Z
+285
+tih
+

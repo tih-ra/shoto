@@ -1,0 +1,2 @@
+module PhotoArtHelper
+end

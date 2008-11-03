@@ -1,0 +1,13 @@
+<% @top_posts = Post.find(:all, :conditions=>{:is_top=>true})%>
+<% if @top_posts%>
+<div style="float:left;">
+<!--BLOCK START-->
+		<div style="padding:10px;">
+		<h3 class="light">WHAT NEW?</h3>
+		<% @top_posts.each do |top_post|%>
+		<span class="title_events"><%=image_tag("icons/arrow_point.gif")%>&nbsp;<%=link_to top_post.title, post_path(top_post)%></span><br/>
+		<% end %>
+</div>
+<!--//BLOCK END-->
+</div>
+<% end %>

@@ -1,0 +1,26 @@
+	<!--BLOCK START-->
+	<div class="boxLightGray">
+		<b class="rl5"></b><b class="rl4"></b><b class="rl3"></b><b class="rl2"></b><b class="rl1"></b>
+		<div class="inner-boxl">
+			<!--//BLOCK START-->
+			<div style="padding:10px;">
+				<div id="manage_video" style="width:500px;">
+					<object width="425" height="344">
+						<param name="movie" value="/swf/video/tvp.swf"></param>
+						<param name="allowFullScreen" value="true"></param>
+						<param name="flashvars" value="serverid=<%=request.host%>:1936&fileid=<%=video.id%>_<%=video.filename%>" />
+						<embed src="/swf/video/tvp.swf" type="application/x-shockwave-flash" flashvars="serverid=<%=request.host%>:1936&fileid=<%=video.id%>_<%=video.filename%>" allowfullscreen="true" width="425" height="344"></embed>
+					</object>
+				</div>
+				<div id="manage_video_delete">
+					<%=link_to image_tag("icons/delete.gif"), manage_video_path(video), :method=>:delete, :confirm => "Ты действительно хочешь удалить видео?" %> 
+				</div>
+			</div>
+			<!--BLOCK END-->
+			<div class="clear-10">&nbsp;</div>
+		</div>
+		<b class="rl1"></b><b class="rl2"></b><b class="rl3"></b><b class="rl4"></b><b class="rl5"></b>
+	</div>
+	<!--//BLOCK END-->
+	<div class="clear-10">&nbsp;</div>
+	

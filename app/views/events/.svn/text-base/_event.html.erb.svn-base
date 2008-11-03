@@ -1,0 +1,10 @@
+<div style="clear:left;padding-top:5px;">
+<%=tih_date(event.start_at, "float:left;")%>
+<div class="event_item_div">
+	<% if event.posts.empty? %>
+	<span class="title_events"><%=event.title%> @ <%=event.place%> (<%=event.geography%>) [<%=event.start_at.to_s(:time)%>]</span>&nbsp;<%=link_to image_tag("icons/info.png"), event.info_url, :target=>"_new" unless event.info_url.blank?%>
+	<% else %>
+	<span class="title_events"><%= link_to "#{event.title} @ #{event.place} (#{event.geography}) [#{event.start_at.to_s(:time)}]", {:controller=>:posts, :action=>:reports, :id=>event.id}, :class=>"title_events" %></span>&nbsp;<%= event.posts.empty? ? '' : (link_to image_tag("icons/attach.png"), {:controller=>:posts, :action=>:reports, :id=>event.id})%>&nbsp;<%=link_to image_tag("icons/info.png"), event.info_url, :target=>"_new" unless event.info_url.blank?%>
+	<% end %>
+</div>
+</div>

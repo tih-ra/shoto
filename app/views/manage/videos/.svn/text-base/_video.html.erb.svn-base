@@ -1,0 +1,29 @@
+	<!--BLOCK START-->
+	<div class="boxLightGray">
+		<b class="rl5"></b><b class="rl4"></b><b class="rl3"></b><b class="rl2"></b><b class="rl1"></b>
+		<div class="inner-boxl">
+			<!--//BLOCK START-->
+			<div style="padding:10px;">
+				<div id="manage_video">
+					<embed
+					src="/swf/player.swf"
+					width="320"
+					height="260"
+					allowscriptaccess="always"
+					allowfullscreen="true"
+flashvars="height=260&width=320&file=rtmp://<%=request.host%>&id=<%=video.id%>_<%=video.filename%>&logo=/images/minilogo.png&searchbar=false&showdigits=false&enablejs=true&type=rtmp"/>
+				</div>
+				<div id="manage_video_embed">
+					<textarea><embed src="http://<%=request.host%>/swf/player.swf" width="540" height="380" allowscriptaccess="always" allowfullscreen="true" flashvars="height=380&width=540&file=rtmp://<%=request.host%>&id=<%=video.id%>_<%=video.filename%>&logo=http://<%=request.host%>/images/minilogo.png&searchbar=false&showdigits=false&enablejs=true&type=rtmp"/></textarea>
+				</div>
+				<div id="manage_video_delete">
+					<%=link_to image_tag("icons/delete.gif"), manage_video_path(video), :method=>:delete, :confirm => "Ты действительно хочешь удалить видео?" %> 
+				</div>
+			</div>
+			<!--BLOCK END-->
+			<div class="clear-10">&nbsp;</div>
+		</div>
+		<b class="rl1"></b><b class="rl2"></b><b class="rl3"></b><b class="rl4"></b><b class="rl5"></b>
+	</div>
+	<!--//BLOCK END-->
+	<div class="clear-10">&nbsp;</div>

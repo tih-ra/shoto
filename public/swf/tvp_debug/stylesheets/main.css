@@ -1,0 +1,76 @@
+/* CSS file */
+.playButton
+{
+	skin: Embed('/images/play.png');
+}
+.pauseButton
+{
+	skin: Embed('/images/pause.png');
+}
+.embedButton
+{
+	skin: Embed('/images/shared.png');
+}
+.fullscreenButton
+{
+	skin: Embed('/images/full_screen.png');
+}
+.copyButton
+{
+	skin: Embed('/images/copy.png');
+}
+.closePopup 
+{
+	skin: Embed('/images/close.png');
+}
+VScrollBar
+{
+	border-style:none;
+	up-arrow-skin: ClassReference( null );
+	down-arrow-skin: ClassReference( null );
+	up-arrow-down-skin: ClassReference( null );
+	up-arrow-disabled-skin: ClassReference( null );
+	up-arrow-over-skin: ClassReference( null );
+	up-arrow-up-skin: ClassReference( null );
+	down-arrow-down-skin: ClassReference( null );
+	down-arrow-disabled-skin: ClassReference( null );
+	down-arrow-over-skin: ClassReference( null );
+	down-arrow-up-skin: ClassReference( null );
+
+	thumb-skin: ClassReference( 'skins.ThumbSkin' );
+	thumbColor:#d3d3d3;
+	track-skin: ClassReference( 'skins.TrackSkin' );
+	trackColor:#ffffff;
+	thumbOffset:0;
+}
+HSlider
+{
+	trackColor:#646464;
+	trackSkin:ClassReference("skins.SliderTrackAlphaSkin");
+	thumbSkin:ClassReference("skins.SliderThumbSkin");
+	trackHighlightSkin:ClassReference("skins.SliderHighlightSkin");
+	show-track-highlight:true;
+	highlightColor:#2d2d2d;
+	trackThickness:11;
+	slide-duration:0;
+}
+HSlider.loadedProgress
+{
+	trackSkin:ClassReference("skins.SliderTrackSkin");
+	thumbSkin:ClassReference("skins.SliderThumbSkin");
+	trackHighlightSkin:ClassReference("skins.SliderHighlightSkin");
+	show-track-highlight:true;
+	highlightColor:#FFFFFF;
+	trackThickness:11;
+	slide-duration:0;
+}
+HSlider.volumeSlider
+{
+	trackSkin:ClassReference("skins.SliderTrackSkin");
+	thumbSkin: Embed('/images/volume.png');
+	trackHighlightSkin:ClassReference("skins.SliderHighlightSkin");
+	show-track-highlight:true;
+	highlightColor:#3d3d3d;
+	trackThickness:11;
+	slide-duration:0;
+}

@@ -1,0 +1,27 @@
+<div class="column span-15 first">
+<div class="column span-15 first last">
+	<div class="column span-5"><%=image_tag (@post.events.empty? ? "pl_blogs.gif" : "pl_reports.gif")%></div>
+	<div class="column span-9">&nbsp;</div>
+</div>
+
+<% unless @post.events.empty?%>
+<% @event = @post.events.find(:first) %>
+<div class="clear-1">&nbsp;</div>
+<%=render :partial => "event_info"%>
+<div class="clear-10">&nbsp;</div>
+<% end %>
+
+<div class="clear-1">&nbsp;</div>
+<%=render :partial => "posts/post", :object => @post, :locals=>{:extendet=>true}%>
+</div>
+<div class="column span-8 last">
+	<%=render :partial => "includes/banner"%>
+	<div class="clear-10">&nbsp;</div>
+	<%=render :partial => "includes/events"%>
+	<div class="clear-10">&nbsp;</div>
+	<%=render :partial => "includes/top_posts"%>
+	<div class="clear-10">&nbsp;</div>
+	<%=render :partial => "includes/tags_posts"%>
+	<div class="clear-10">&nbsp;</div>
+	<%=render :partial => "includes/contacts"%>
+</div>

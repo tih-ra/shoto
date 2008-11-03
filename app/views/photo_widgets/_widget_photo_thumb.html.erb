@@ -1,0 +1,4 @@
+<div class="progressWrapper" id="image_<%=widget_photo_thumb.id%>" bigimage="<%=widget_photo_thumb.public_filename(:content)%>" album_id="<%=widget_photo_thumb.id%>" onClick="callFrontJs(this);return false;">
+	<div class="progressContainer blue" ><div style="position:absolute;z-index:120;margin:42px 0 0 62px"><%=link_to_remote image_tag("icons/close.png", :style=>"width:16px;height:16px;", :onclick=>"$('image_#{widget_photo_thumb.id}').onclick='return false;'"), :url=>manage_photo_url(widget_photo_thumb), :method=>:delete, :complete=>"$('image_#{widget_photo_thumb.id}').remove();"%></div><%=image_tag widget_photo_thumb.public_filename(:middle)%></div>
+</div>
+<%= draggable_element("image_#{widget_photo_thumb.id}", :revert=>true)%>

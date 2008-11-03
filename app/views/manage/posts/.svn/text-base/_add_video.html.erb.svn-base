@@ -1,0 +1,19 @@
+<div style="width:300px;">
+	<!--BLOCK START-->
+	<div class="boxLightGray">
+		<b class="rl5"></b><b class="rl4"></b><b class="rl3"></b><b class="rl2"></b><b class="rl1"></b>
+		<div class="inner-boxl">
+			<!--//BLOCK START-->
+			<ul class="down"><li><%=link_to "добавить видео", "#"%></li></ul>
+			<div style="padding:10px;display:none;">
+				<% fields_for :albums do |af| %>
+				<%= af.collection_select(:id, current_user.albums, "id", "title", {:include_blank => false}, {:style=>"width:220px"}) %>
+				<% end %>
+			</div>
+			<!--BLOCK END-->
+			<div class="clear-10">&nbsp;</div>
+		</div>
+		<b class="rl1"></b><b class="rl2"></b><b class="rl3"></b><b class="rl4"></b><b class="rl5"></b>
+	</div>
+	<!--//BLOCK END-->
+</div>

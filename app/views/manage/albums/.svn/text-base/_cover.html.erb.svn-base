@@ -1,0 +1,4 @@
+<div class="manage_albums">
+	<%=link_to truncate(album.title, 20), manage_album_path(album), :class=>"micro_title", :title=>album.title %> <%=link_to image_tag("icons/delete.gif", :alt=>album.title), manage_album_path(album), :method=>:delete, :confirm => "Ты действительно хочешь удалить альбом?" %> 
+	<%=image_tag(album_cover album)%>
+</div>

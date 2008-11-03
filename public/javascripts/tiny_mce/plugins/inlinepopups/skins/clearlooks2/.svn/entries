@@ -1,0 +1,44 @@
+8
+
+dir
+298
+svn://localhost/web/tih-ra/public/javascripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2
+svn://localhost/web
+
+
+
+2008-04-23T11:21:52.079196Z
+285
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+3876a785-e795-dc11-807d-004063eecf1d
+
+img
+dir
+
+window.css
+file
+
+
+
+
+2008-05-01T18:23:43.000000Z
+37594e8db451824225fe908e3e03c1dd
+2008-04-23T11:21:52.079196Z
+285
+tih
+has-props
+

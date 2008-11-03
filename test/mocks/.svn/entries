@@ -1,0 +1,34 @@
+8
+
+dir
+298
+svn://localhost/web/tih-ra/test/mocks
+svn://localhost/web
+
+
+
+2008-04-17T17:00:44.467567Z
+279
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+3876a785-e795-dc11-807d-004063eecf1d
+
+test
+dir
+
+development
+dir
+

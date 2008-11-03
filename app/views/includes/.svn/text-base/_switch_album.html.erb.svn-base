@@ -1,0 +1,5 @@
+<select onchange="document.location.href=this.value; return false;">
+	<% switch_album.each do |album| %>
+		<option value="<%=manage_album_path(album)%>" <%= (album==current_album) ? 'selected' : ''%>><%=album.title%></option>
+	<% end %>
+</select>

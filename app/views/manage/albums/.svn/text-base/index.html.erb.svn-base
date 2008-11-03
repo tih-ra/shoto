@@ -1,0 +1,23 @@
+<!--BLOCK START-->
+<div class="boxDarkGray">
+	<b class="r5"></b><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b>
+	<div class="inner-box">
+		<!--//BLOCK START-->
+
+		<h2>МОИ АЛЬБОМЫ</h2>
+
+		<% form_for :album, :url => manage_albums_path do |f| -%>
+		<label for="album_title">Название альбома:</label><br/>
+			<%= f.text_field :title %> <%=submit_tag "Создать" %>
+			<% end %>
+			<div class="clear-10">&nbsp;</div>
+			<% @albums.each do |album| %>
+			<%=render :partial=>"/manage/albums/cover", :locals=>{:album=>album} %>
+			<% end %>
+
+			<!--BLOCK END-->
+			<div class="clear-10">&nbsp;</div>
+		</div>
+		<b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b><b class="r5"></b>
+	</div>
+	<!--//BLOCK END-->

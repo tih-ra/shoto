@@ -1,0 +1,23 @@
+
+
+<div class="column span-15 first">
+<div class="column span-15 first last">
+	<div class="column span-5"><%=image_tag "pl_blogs.gif"%></div>
+	<div class="column span-9"><%=will_paginate @posts%>&nbsp;</div>
+</div>
+<div class="clear-1">&nbsp;</div>
+<%=render :partial => "posts/post", :collection => @posts, :locals=>{:extendet=>false}%>
+</div>
+<div class="column span-8 last">
+	<%=render :partial => "includes/banner"%>
+	<div class="clear-10">&nbsp;</div>
+	<%=render :partial => "includes/personal_info"%>
+	<div class="clear-10">&nbsp;</div>
+	<%=render :partial => "includes/events"%>
+	<div class="clear-10">&nbsp;</div>
+	<%=render :partial => "includes/top_posts"%>
+	<div class="clear-10">&nbsp;</div>
+	<%=render :partial => "includes/tags_posts"%>
+	<div class="clear-10">&nbsp;</div>
+	<%=render :partial => "includes/contacts"%>
+</div>

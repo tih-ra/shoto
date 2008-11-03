@@ -1,0 +1,2 @@
+module FreezeFramesHelper
+end

@@ -1,0 +1,48 @@
+<script language="javascript">
+var upload1;
+<% assetable_type = params[:assetable_type]%>
+var assetable_type = "<%=assetable_type%>";
+<% assetable_id = params[:assetable_id]%>
+var assetable_id = "<%=assetable_id%>";
+
+		function loadswf() {
+			upload1 = new SWFUpload({
+				// Backend Settings
+				upload_url: "/manage/photos/create/",	// Relative to the SWF file (or you can use absolute paths)
+				post_params: {"user_id" : "<%=current_user.id%>", "assetable_type" : assetable_type, "assetable_id" : assetable_id},
+				// File Upload Settings
+				file_size_limit : "102400",	// 100MB
+				file_types : "*.jpg;*.gif;*.png",
+				file_types_description : "All Files",
+				file_upload_limit : "300",
+				file_queue_limit : "0",
+
+				// Event Handler Settings (all my handlers are in the Handler.js file)
+				file_dialog_start_handler : fileDialogStart,
+				file_queued_handler : fileQueued,
+				file_queue_error_handler : fileQueueError,
+				file_dialog_complete_handler : fileDialogComplete,
+				upload_start_handler : uploadStart,
+				upload_progress_handler : uploadProgress,
+				upload_error_handler : uploadError,
+				upload_complete_handler : uploadComplete,
+				file_complete_handler : fileComplete,
+
+				// Flash Settings
+				flash_url : "/swf/swfupload.swf",	// Relative to this file (or you can use absolute paths)
+
+				// UI Settings
+				ui_container_id : "flashUI1",
+				degraded_container_id : "degradedUI1",
+
+				// Debug Settings
+				debug: false
+			});
+			upload1.customSettings.progressTarget = "photo_thumbs";	// Add an additional setting that will later be used by the handler.
+			upload1.customSettings.cancelButtonId = "btnCancel1";			// Add an additional setting that will later be used by the handler.
+		}
+		window.onload = function() {
+			loadswf();
+		}
+	</script>
+

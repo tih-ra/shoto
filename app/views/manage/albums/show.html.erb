@@ -1,0 +1,72 @@
+<script language="javascript">
+function callFrontJs(src) {
+	if (toremove!=src.id) {
+	var progressContainer = $(src).down('div.progressContainer')
+	$(progressContainer).update("<a href='/manage/photos/"+$(src).readAttribute("album_id")+"/edit' id='cnt"+$(src).readAttribute("album_id")+"'>"+$(progressContainer).innerHTML+"</a>");
+	var parent_id = 'cnt'+$(src).readAttribute("album_id");
+	hs.htmlExpand($(parent_id), { contentId: 'highslide-html-photo', objectType: 'ajax', preserveContent: true} );
+	}
+}
+function rotateThumb(img, src) {
+	$(img).down('img', 1).src = src;
+}
+</script>
+
+<!--BLOCK START-->
+<div class="boxDarkGray">
+    <b class="r5"></b><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b>
+	<div class="inner-box">
+<!--//BLOCK START-->
+
+		<h2>АЛЬБОМ</h2>
+
+	<% form_for :album, :url => manage_album_path(@album), :html => {:method => :put} do |f| -%>
+	<label for="album_title">Редактировать название</label><br/>
+	<%=f.text_field :title%><br/>
+	<label for="album_title">Freeze Frames</label><br/>
+	<%=f.check_box :is_freeze_frames%><br/>
+	<label for="album_switch">Переключить альбом</label><br/>
+	<%=render :partial => "includes/switch_album", :object => current_user.albums, :locals => {:current_album => @album}  %>
+	<div class="clear-10">&nbsp;</div>
+	<div><span class="war"><%=flash[:album_notice]%></span></div>
+	<div id="photo_collection">
+		<%=render_component :controller => "/photo_widgets", :action=>'index', :params => { :assetable_type=>'Album', :assetable_id=>@album.id, :panel_size=>700 }%>
+	</div>
+	
+	<div class="clear-10">&nbsp;</div>
+	
+	<div class="column span-14 first">
+			<label for="album_description">Описание альбома</label><br/>
+			<div class="clear"></div>
+			<%= f.text_area :description, :class=>"gptextarea", :style=>'margin:0;width:500px;height:104px;' %>
+	</div>
+	<div class="column span-4 last">
+			<label for="album_cover">Обложка альбома</label>
+			<div id="album-photo-container" style="z-index:0">
+				<%=image_tag album_cover(@album), :size=>'154x114'%>
+			</div>
+			<%= drop_receiving_element("album-photo-container", :update=>"album-photo-container", :url => { :action => "cover" }) %>
+	</div>
+	
+	<div class="clear-10">&nbsp;</div>
+	
+	<%=submit_tag 'сохранить', :class=>'gpbutton', :style=>'width:100px;'%>
+	<% end %>
+
+	<!--BLOCK END-->
+		<div class="clear-10">&nbsp;</div>
+	</div>
+	<b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b><b class="r5"></b>
+	</div>
+	<!--//BLOCK END-->	
+
+
+
+<!--
+<div class="highslide-html-content" id="highslide-html-photo" style="width:250px;height:270px;">
+	<div class="highslide-move" style="border: 0; height: 18px; padding: 2px; cursor: default">
+	    <a href="#" onclick="return hs.close(this)" class="control">x</a>
+	</div>
+	<div class="highslide-body"></div>
+</div>
+-->
