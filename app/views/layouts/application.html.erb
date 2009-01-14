@@ -1,13 +1,6 @@
 <%=render :partial => "includes/header"%>
-<div class="column span-24 first last">
-<div class="clear-10">&nbsp;</div>		
-		<div class="boxGray">
-		    <b class="r5"></b><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b>
-			<div class="inner-box" style="padding-left:20px;">
+<div class="column span-24 first last" style="background:#f1f1f1;">
+	
 			<%=yield%>
-				<div class="clear-10">&nbsp;</div>
-			</div>
-			<b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b><b class="r5"></b>
-		</div>
 </div>
 <%=render :partial => "includes/footer"%>

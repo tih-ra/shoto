@@ -5,16 +5,7 @@
 <!--//BLOCK START-->
 		<h2>MY EVENTS</h2>
 		<% form_for :event, :url => manage_events_path do |f| -%>
-		<label for="post_title">Название</label><br/>
-		<%= f.text_field :title, :class=>"blog" %><br/>
-		<label for="post_title">География</label><br/>
-		<%= f.text_field :geography, :class=>"blog" %><br/>
-		<label for="post_title">Место</label><br/>
-		<%= f.text_field :place, :class=>"blog" %><br/>
-		<label for="post_title">Дата / Время</label><br/>
-		<%= f.datetime_select :start_at, :order => [:day, :month, :year], :minute_step => 15%><br/>
-		<label for="post_title">Info ULR</label><br/>
-		<%= f.text_field :info_url, :class=>"blog" %><br/>
+			<%=render :partial => "form", :locals => { :f => f }%>
 		<div class="clear-10">&nbsp;</div>
 		<%= submit_tag "Сохранить", :class=>"submit" %>
 		<% end %>

@@ -1,0 +1,10 @@
+<label for="post_title">Заголовок</label><br/>
+<%= f.text_field :title, :class=>"blog" %><br/>
+<label for="post_title">Формат</label><br/>
+<%= f.text_field :geography, :class=>"blog" %><br/>
+<label for="post_title">Місце</label><br/>
+<%= f.text_field :place, :class=>"blog" %><br/>
+<label for="post_title">Дата / Час</label><br/>
+<%= f.date_select :start_at, :order => [:day, :month, :year]%><br/>
+<label for="post_title">Info ULR</label><br/>
+<%= f.text_field :info_url, :class=>"blog" %><br/>

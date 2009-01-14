@@ -3,18 +3,26 @@ h3.light {
 }
 body {
 	background-color: #000000;
+	font-family: Helvetica;
 }
 #head {
-	height: 142px;
-	background: url(/images/head.gif) no-repeat left top;
+	height: 126px;
+	background: url(/images/shotofilms/header.gif);
 }
 #footer {
-	margin-top: 10px;
-	height: 54px;
-	background: url(/images/footer.gif) no-repeat left top;
+	height: 250px;
+	background: url(/images/shotofilms/footer.gif);
+}
+.menu_item {
+	text-decoration: none;
+	font-size: 14px;
+	color: #4e4e4e;
+	font-weight: bold;
+	padding-right: 46px;
 }
 div.about_title {
-	float: right;
+	float: left;
+	margin: 50px 0 0 35px;
 }
 div.freeze_frame_thumb {
 	width: 219px;
@@ -29,7 +37,7 @@ hr.cut {
 div.main_menu {
 	float: right;
 	clear: both;
-	padding-top: 95px;
+	margin: -20px 0 0 35px;
 }
 #manage_video {
 	float: left;
@@ -97,7 +105,7 @@ div.blog_content img {
 .rl1 {margin: 0 1px;}
 .inner-box {padding:1em; text-align: left; min-height: 20px;}
 .div-clear .inner-box, .div-clear b {background-color: none;}
-.boxGray .inner-box, .boxGray b {background-color:#cacaca;}
+.boxGray .inner-box, .boxGray b {background-color:#FFFFFF;}
 .boxLightGray .inner-boxl, .boxLightGray .rl1,  .boxLightGray .rl2, .boxLightGray .rl3, .boxLightGray .rl4, .boxLightGray .rl5 {background-color:#dfdfdf;}
 .boxDarkGray .inner-box, .boxDarkGray b {background-color:#aeaeae;}
 .clear {clear:both;float:none;}
