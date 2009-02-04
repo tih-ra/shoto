@@ -1,6 +1,5 @@
 <div class="column span-15 first">
 <div class="column span-15 first last">
-	<div class="column span-5"><%=image_tag (params[:action]=="reports" ? "pl_reports.gif" : "pl_blogs.gif")%></div>
 	<div class="column span-9"><%=will_paginate @posts%>&nbsp;</div>
 </div>
 <% if @event%>
