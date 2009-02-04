@@ -2,8 +2,8 @@
 <!--BLOCK START-->
 		<div style="padding:10px;">
 		<h3 class="light">ABOUT TIH-RA</h3>
-		<% personal_info = PersonalInfo.find(:first)%>
-		<%=personal_info.content%>
+		<% @personal_info = PersonalInfo.find(:first)%>
+		<%=@personal_info.content if @personal_info%>
 </div>
 <!--//BLOCK END-->
 </div>

@@ -2,3 +2,4 @@
 public/attachments
 database.yml
 tmp/
+db/development.sqlite3
