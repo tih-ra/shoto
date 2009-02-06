@@ -13,12 +13,21 @@ module ApplicationHelper
       return album.photos.empty? ? 'default-150.gif' : album.photos.first.public_filename(:cover)
     end
   end
+=begin
   def tih_date(obj_date, style='')
     return "<div class='date_block' style='#{style}'>
 			<div class='date_block_day' style='background: url(/images/dates/d#{obj_date.day.to_s}.png);'>&nbsp;</div>
 			<div class='date_block_month' style='background: url(/images/dates/m#{obj_date.month.to_s}.png);'>&nbsp;</div>
 			<div class='date_block_year' style='background: url(/images/dates/y#{obj_date.year.to_s}.png);'>&nbsp;</div>
 		</div>"
+  end
+=end
+  def tih_date(obj_date, style='')
+    return "<div class='date_block' style='#{style}'>
+      <span>achtung</span>
+      <hr/>
+      #{obj_date.day.to_s}.#{obj_date.month.to_s}.#{obj_date.year.to_s}
+    </div>"
   end
   def collection_select_multiple(object, method,
                                    collection, value_method, text_method,

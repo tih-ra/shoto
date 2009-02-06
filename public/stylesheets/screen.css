@@ -24,6 +24,12 @@ div.about_title {
 	float: left;
 	margin: 50px 0 0 35px;
 }
+#main_container {
+	background:#f1f1f1;
+}
+#main_p {
+	margin-left: 15px;
+}
 div.freeze_frame_thumb {
 	width: 219px;
 	height: 161px;
@@ -144,7 +150,7 @@ ul.down li{
 	padding-left: 20px;
 	margin: 0;
 }
-/* DATE BLOCK */
+/* DATE BLOCK 
 div.date_block {
 	width: 34px;
 	height: 34px;
@@ -172,6 +178,26 @@ div.date_block div.date_block_year {
 	height: 17px;
 	clear: left;
 }
+END DATE BLOCK */
+/* DATE BLOCK */
+div.date_block {
+	width: 50px;
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	font-size: 10px;
+	color: #8e8e8e;	
+}
+div.date_block span{
+	font-size: 10px;
+	color: #ffbb46;
+}
+div.date_block hr{
+	background: #8e8e8e;
+	width: 100%;
+	margin-bottom: -2px;
+}
+
 /* END DATE BLOCK */
 ul.up li{
 	list-style-type: none;
@@ -191,12 +217,12 @@ div.tagsContent {
 div.tagsContent a {
 	color: #989898;
 	text-decoration: none;
-	font-size: 14px;
+	font-size: 11px;
 }
 div.tagsContent a:hover {
 	color: #4a4a4a;
 	text-decoration: underline;
-	font-size: 14px;
+	font-size: 11px;
 }
 a.title_main:hover {
 	text-decoration: underline;

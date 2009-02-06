@@ -14,63 +14,10 @@ function validate_entries() {
 	}
 }
 </script>
+<%render :layout => "manage/includes/boxDarkGray", :locals=>{:title=>"РЕДАГУВАТИ @ #{@post.title}"} do %>
+	<% form_for :post, :url => manage_post_path(@post), :html => {:method=>:put, :onsubmit => 'return validate_entries();', :id=>"post_form"} do |f| -%>
+		<%=render :partial => "form", :locals=>{:f=>f}%>
+	<% end %>
+<%end%>
 
 
-<!--BLOCK START-->
-<div class="boxDarkGray">
-    <b class="r5"></b><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b>
-	<div class="inner-box">
-<!--//BLOCK START-->
-		<h2>РЕДАКТИРОВАТЬ @ <%=@post.title%></h2>
-				<% form_for :post, :url => manage_post_path(@post), :html => {:method=>:put, :onsubmit => 'return validate_entries();', :id=>"post_form"} do |f| -%>
-				<label for="post_title">Заголовок</label><br/>
-				<%= f.text_field :title, :class=>"blog" %>
-				<%=link_to image_tag("icons/photo.png", :class=>"icon"), '#', :onclick=>"return hs.htmlExpand(this, { contentId: 'highslide-html' } )", :class=>'highslide nobg'%>
-				<div class="clear"><!--IE--></div>
-				<label for="post_content">Содержание</label>
-				<%= f.text_area :content, :class=>'blog' %>
-				<div class="clear"><!--IE--></div>
-				<label for="post_title">Top :</label>
-				<%= f.check_box :is_top %><br/>
-				<label for="post_title">Video :</label>
-				<%= f.check_box :is_video %><br/>
-				<label for="post_content">Теги<small>(вносятся через запятую)</small>:</label><br/>
-				<%= f.text_field :tag_list, :class=>'blog', :style=>'width:460px;' %><br/><br/>
-					
-				<%=render :partial => "add_album"%>
-				<div class="clear-10">&nbsp;</div>
-				<%= submit_tag "Сохранить", :class=>"submit" %>
-				
-				<% end %>
-			
-<!--BLOCK END-->
-	<div class="clear-10">&nbsp;</div>
-</div>
-<b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b><b class="r5"></b>
-</div>
-<!--//BLOCK END-->
-
-
-
-<div class="highslide-html-content" id="highslide-html" style="width:645px;text-align:left;">
-	
-	<%= link_to image_tag("admin/icons/bullet_red.png", :class=>"icon", :style=>"float:right;"), "#", :onclick=>"return hs.close(this)"%>
-	<%= link_to image_tag("admin/icons/arrow_out.png", :class=>"icon", :style=>"float:right;"), "#", :onclick=>"return false", :class=>"highslide-move"%>
-	
-	<span style="color:#CCCCCC;">Выбрать альбом </span>
-		<% if current_user.albums.empty? 
-			current_user.albums.create(:title=>'Без названия')
-		end %>
-		<%= collection_select(:assetable_id, '', current_user.albums, "id", "title", {:include_blank => false}, {:id => "collection_selector"}) %>
-		<%=observe_field ("collection_selector", 
-						  	:update=>"photo_collection", 
-							:url => "/photo_widgets/?selector=1",
-							:success => "assetable_id=$('collection_selector').value;javascript:loadswf();", 
-							:with => "'assetable_id='+value+'&assetable_type=Album'") %>
-	
-	<div class="clear-10">&nbsp;</div>
-	
-	<div class="highslide-body" style="padding:0 10px 10px 10px;" id="photo_collection">
-		<%=render_component :controller => "/photo_widgets", :action=>'index', :params => { :assetable_type=>'Album', :assetable_id=>current_user.albums(:first)[0].id }%>
-	</div>
-</div>

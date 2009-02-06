@@ -1,6 +1,7 @@
 <%=render :partial => "includes/header"%>
-<div class="column span-24 first last" style="background:#f1f1f1;">
-	
-			<%=yield%>
+<div class="column span-24 first last" id="main_container">
+	<div id="main_p">
+	<%=yield%>
+	</div>
 </div>
 <%=render :partial => "includes/footer"%>

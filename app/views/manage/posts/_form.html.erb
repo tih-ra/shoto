@@ -1,0 +1,16 @@
+	<label for="post_title">Заголовок</label><br/>
+	<%= f.text_field :title, :class=>"blog" %>
+	<%=link_to image_tag("icons/photo.png", :class=>"icon"), '#'%>
+	<div class="clear"><!--IE--></div>
+	<label for="post_content">Зміст</label>
+	<%= f.text_area :content, :class=>'blog' %>
+	<div class="clear"><!--IE--></div>
+	<label for="post_content">Теги<small>(вносятся через кому)</small>:</label><br/>
+	<%= f.text_field :tag_list, :class=>'blog', :style=>'width:460px;' %><br/><br/>
+	<label for="post_title">в Achtung :</label>
+	<%= f.check_box :is_top %><br/>
+	<label for="post_title">Публікувати? :</label>
+	<%= f.check_box :is_public %><br/>
+		
+	<div class="clear-10">&nbsp;</div>
+	<%= submit_tag "Зберегти", :class=>"submit" %>

@@ -1,7 +1,6 @@
 <div style="float:left;">
 <!--BLOCK START-->
 		<div style="padding:10px;">
-		<h3 class="light">TAGS</h3>
 		<% @tags = Post.tag_counts(:limit => 50, :order => 'count desc').sort {|x,y| x.name.downcase <=> y.name.downcase} %>
 			<%=image_tag "icons/tag.gif"%>
 		<% tag_cloud @tags, %w(cloud1 cloud2 cloud3 cloud4) do |tag, css_class| %>

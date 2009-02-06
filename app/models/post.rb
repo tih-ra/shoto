@@ -10,7 +10,7 @@ class Post < ActiveRecord::Base
  #has_many :comments, :as => :commentable, :dependent => :destroy
  #has_one :access, :as => :accessible, :dependent => :destroy
  acts_as_taggable
- 
+ COMMENTS_ACCESS_LEVEL=>["Публічний", "Без Коментарів"]
  def to_param
    id.to_s + "-" + slug
  end
