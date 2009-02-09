@@ -1,0 +1,5 @@
+<%render :layout => "manage/includes/boxDarkGray", :locals=>{:title=>"РЕДАГУВАТИ @ #{Service::CETEGORIES.find {|c| c.idn==@service.category}.name}"} do %>
+	<% form_for :service, :url => manage_service_path(@service), :html => {:method=>:put} do |f| -%>
+		<%=render :partial => "form", :locals=>{:f=>f}%>
+	<% end %>
+<%end%>

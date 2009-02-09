@@ -7,10 +7,16 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => 'welcome'
   map.resources :posts
   map.resources :events
+  map.resources :comments
   map.resource :contacts
   map.resource :freeze_frames
   map.resource :photo_art, :controller=>'photo_art'
   map.resource :videos
+  map.resource :igogo_uploader, :controller=>'igogo_uploader'
+  
+  map.logout   '/logout', :controller => 'sessions', :action => 'destroy'
+  map.login    '/login', :controller => 'sessions', :action => 'new'
+  
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
   # Keep in mind you can assign values other than :controller and :action
@@ -42,9 +48,11 @@ ActionController::Routing::Routes.draw do |map|
     manage.resources :posts
     manage.resources :albums
     manage.resources :photos
+    manage.resources :services
     manage.resources :videos
     manage.resources :events
     manage.resources :banners
+    manage.resources :users
     manage.resource :personal_info
   end
   # Install the default routes as the lowest priority.

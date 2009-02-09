@@ -1,0 +1,28 @@
+<% content_tag_for :div, user, :class=>"list" do %>
+	<% content_tag :div, :style=>"width:230px" do %>
+		<%=content_tag :div, avatar(user), :style=>"width:60px;padding-right:10px;float:left;"%> 
+		<%=content_tag :span, "#{user.firstname} #{user.lastname}", :class=>"title"%><br/>
+		<%=content_tag :span, user.roles.map{|c| c.name}.join(', '), :class=>"micro", :style=>"margin-top:-10px"%><br/>
+		<%=mail_to user.email, user.email, :class=>"micro"%><br/>
+	<% end %>
+	<% content_tag :div, :style=>"width:250px;padding-left:10px;" do %>
+		<%render :layout => "manage/includes/boxLightGray", :locals=>{:widht=>"250px", :padding=>"0 0 0 10px"} do %>
+			<%=content_tag :span, "Дата народження: <i>#{user.birthdate.to_s(:onlydate)}</i>", :class=>"micro", :style=>"margin-top:-10px"%><br/>
+			<%=content_tag :span, "моб./дом. тел: <i>#{user.mobilephone} / #{user.homephone}</i>", :class=>"micro", :style=>"margin-top:-10px"%><br/>
+			<%=content_tag :span, "IM: <i>#{user.messanger}</i>", :class=>"micro", :style=>"margin-top:-10px"%><br/>
+		<% end %>
+	<% end %>
+	<% content_tag :div, :style=>"width:140px;padding-left:10px;" do %>
+		<%render :layout => "manage/includes/boxLightGray", :locals=>{:widht=>"140px", :padding=>"0 0 0 10px"} do %>
+			<%=content_tag :span, "постів: #{user.posts.count}", :class=>"micro", :style=>"margin-top:-10px"%><br/>
+			<%=content_tag :span, "коментів: #{user.comments.count}", :class=>"micro", :style=>"margin-top:-10px"%><br/>
+			<%=content_tag :span, "tasks: TODO", :class=>"micro", :style=>"margin-top:-10px"%><br/>
+		<% end %>
+	<% end %>
+	<% content_tag :div, :style=>"width:50px;padding-left:10px;" do %>
+		<% admin_content do %>
+			<%=admin_buttons(edit_manage_user_path(user), manage_user_path(user))%>
+		<% end %>
+	<% end %>
+<% end %>
+<div class="clear-10">&nbsp;</div>

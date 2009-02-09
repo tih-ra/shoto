@@ -1,0 +1,5 @@
+.igogoProgressWrapper span.igogoProgressTop {line-height:16px;font-size:11px;color:#000;}
+.igogoProgressWrapper span.igogoProgressBottom {line-height:12px;font-size:11px;color:#7C8284;}
+.igogoProgressWrapper .igogoProgressBar {width:112px;height:16px;padding:2px 2px;background:url("background.gif") no-repeat;overflow:hidden;}
+.igogoProgressWrapper .igogoProgressBar .igogoProgressBarStatus {height:14px;background:url("progress_bar.gif") repeat-x;}
+.igogoProgressWrapper .igogoProgressBar span.igogoProgressPercent {display:block;line-height:15px;height:15px;font-size:11px;position:absolute;margin:0 0 0 50px;}

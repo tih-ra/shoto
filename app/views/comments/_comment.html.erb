@@ -1,0 +1,8 @@
+<% content_tag_for :div, comment do %>
+	<%=comment.user_id==0 ? public_from_nested(comment) : avatar_from_nested(comment)%>
+	<% my_or_producer_content comment do %>
+		<%=admin_remote_delete_button(comment_path(comment))%>
+	<% end %>
+	<%=content_tag :div, auto_link(simple_format (comment.comment)), :style=>"clear:both;"%>
+<% end %>
+<br/>

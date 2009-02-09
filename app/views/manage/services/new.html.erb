@@ -1,0 +1,6 @@
+<%render :layout => "manage/includes/boxDarkGray", :locals=>{:title=>"СТВОРИТИ ПОСЛУГУ"} do %>
+	<% form_for :service, :url => manage_services_path do |f| -%>
+		<%=render :partial => "form", :locals=>{:f=>f}%>
+	<% end %>
+<%end%>	
+<div class="clear-10">&nbsp;</div>

@@ -1,7 +1,8 @@
 class Manage::PostsController < Manage::MainController
     before_filter :find_post, :only => [:show, :edit, :update, :destroy]
-    before_filter :find_album, :only => [:create, :update]
-    before_filter :login_required
+    configure_igogo_uploader(:options=>{:upload_url=>"/manage/photos", :post_file_name=>"Filedata"})
+    before_filter :editor_required
+    before_filter :producer_or_my_content, :only=>[:edit, :update, :destroy]
     uses_tiny_mce(:options => {:theme => 'advanced',
                                #:browsers => %w{msie gecko safari},
                                :cleanup_on_startup => true,
@@ -22,22 +23,18 @@ class Manage::PostsController < Manage::MainController
                   :only => [:new, :edit, :show, :index])
                   
     
-    def new
+    def index
       @posts = current_user.posts.paginate(:page => params[:page], :per_page => 15, :order=> 'created_at DESC')
+    end
+    def new
       @post = current_user.posts.new
     end
     
     
     def create
       @post = current_user.posts.new(params[:post])
-      if @post.save!
-        if @album
-          @album_attachment = @post.post_attachments.new()
-          @album_attachment.attachable = @album
-          @album_attachment.save
-        end
-      end
-      redirect_to new_manage_post_path
+      @post.save!
+      redirect_to manage_posts_path
       rescue ActiveRecord::RecordInvalid
         render :action => 'new'
     end
@@ -45,15 +42,7 @@ class Manage::PostsController < Manage::MainController
     def update
       @post.update_attributes(params[:post])
       @post.save!
-      unless @post.post_attachments.empty?
-        @post.post_attachments.find(:first).destroy
-      end
-      if @album
-        @album_attachment = @post.post_attachments.new()
-        @album_attachment.attachable = @album
-        @album_attachment.save
-      end  
-      redirect_to new_manage_post_path
+      redirect_to manage_posts_path
       rescue ActiveRecord::RecordInvalid
         render :action => 'edit'
     end
@@ -73,20 +62,11 @@ class Manage::PostsController < Manage::MainController
     
     
     private
-=begin    
-   def authorized?
-      ['index', 'new', 'create'].include?(action_name) || 
-      (['edit', 'update', 'destroy'].include?(action_name) && (current_user == @post.user || admin?))
-   end
-=end  
-    
     def find_post
       @post = Post.find(params[:id])
     end
-    def find_album
-      unless params[:album][:id].blank?
-        @album = Album.find(params[:album][:id])
-      end
+    def producer_or_my_content
+      producer_or_my_content_required(@post)
     end
    
 end

@@ -1,14 +1,14 @@
 8
 
 dir
-298
-svn://localhost/web/tih-ra/vendor/plugins/attachment_fu/test/fixtures
-svn://localhost/web
+3588
+svn://frendid-web.brainberry.com.ua/frendid_com/vendor/plugins/attachment_fu/test/fixtures
+svn://frendid-web.brainberry.com.ua
 
 
 
-2008-04-23T11:21:52.079196Z
-285
+2008-09-24T16:12:36.531392Z
+2857
 tih
 
 
@@ -24,7 +24,7 @@ svn:special svn:externals svn:needs-lock
 
 
 
-3876a785-e795-dc11-807d-004063eecf1d
+94409d5f-52c0-4372-a4fa-56ddde109ce3
 
 files
 dir
@@ -35,9 +35,9 @@ file
 
 
 
-2008-05-01T18:23:35.000000Z
-57c44ef8a3c12b3010dff07eaf388d24
-2008-04-23T11:21:52.079196Z
-285
+2008-11-24T13:59:17.000000Z
+7255964aae6997079306407d820f715f
+2008-09-24T16:12:36.531392Z
+2857
 tih
 

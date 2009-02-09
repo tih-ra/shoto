@@ -1,0 +1,40 @@
+<%= f.label :email, "Email:" %><br/>
+<%= f.text_field :email, :class=>'blog', :style=>'width:260px;' %><br/>
+
+<%= f.label :first_name, "Ім'я:" %><br/>
+<%= f.text_field :firstname, :class=>'blog', :style=>'width:260px;' %><br/>
+<%= f.label :first_name, "Прізвище:" %><br/>
+<%= f.text_field :lastname, :class=>'blog', :style=>'width:260px;' %><br/><br/>
+
+<%= f.label :birthdate, "Дата народження:" %><br/>
+<%= f.date_select :birthdate, :start_year=>1950 %><br/>
+
+<%= f.label :mobilephone, "Моб. телефон:" %><br/>
+<%= f.text_field :mobilephone, :class=>'blog', :style=>'width:260px;' %><br/>
+<%= f.label :homephone, "Дом. телефон:" %><br/>
+<%= f.text_field :homephone, :class=>'blog', :style=>'width:260px;' %><br/>
+<%= f.label :messanger, "IM:" %><br/>
+<%= f.text_field :messanger, :class=>'blog', :style=>'width:260px;' %><br/><br/>
+
+<%= f.label :first_name, "Аватар:" %><br/>
+<%=avatar @user%>
+<%= file_field 'avatar', 'uploaded_data' %><br/><br/>
+
+<%= f.label :password, "Пароль:" %><br/>
+<%= f.password_field :password, :class=>'blog', :style=>'width:160px;' %><br/>
+<%= f.label :password_confirmation, "Підтвердження пароля:" %><br/>
+<%= f.password_field :password_confirmation, :class=>'blog', :style=>'width:160px;' %><br/>
+
+<% admin_content do %>
+<%= f.label :first_name, "Група:" %><br/>
+	<ul>
+	<% for role in Role.all %>
+		<li>
+			<%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
+			<%= role.name %>
+		</li>
+	<% end %>
+	<ul/>
+<% end %>
+<div class="clear-10">&nbsp;</div>
+<%= submit_tag "Зберегти", :class=>"submit" %>

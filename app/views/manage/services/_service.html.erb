@@ -1,0 +1,21 @@
+<!--BLOCK START-->
+<div class="boxLightGray">
+	<b class="rl5"></b><b class="rl4"></b><b class="rl3"></b><b class="rl2"></b><b class="rl1"></b>
+	<div class="inner-boxl">
+		<!--//BLOCK START-->
+		<div style="padding:10px;">
+		<%=tih_date(service.created_at, "float:left;padding-right:10px;width:80px", 1)%>
+		<div id="manage_event_item">
+			<span class="title_list"><%=Service::CETEGORIES.find {|c| c.idn==service.category}.name%></span>
+		</div>
+		<div id="manage_event_delete">
+			<%=admin_buttons(edit_manage_service_path(service), manage_service_path(service))%>		
+		</div>
+		</div>
+		<!--BLOCK END-->
+		<div class="clear-10">&nbsp;</div>
+	</div>
+	<b class="rl1"></b><b class="rl2"></b><b class="rl3"></b><b class="rl4"></b><b class="rl5"></b>
+</div>
+<!--//BLOCK END-->
+<div class="clear-10">&nbsp;</div>

@@ -1,0 +1,18 @@
+<br/>
+<div id="comments">
+	<%=render :partial => "comments/comment", :collection => model.comments%>
+</div>
+<br/>
+<h3>Добавити коментар</h3>
+<br/>
+<% remote_form_for :comment, :url=>comments_path do |f| %>
+	<% unless logged_in? %>
+		<%= f.label :title, "Ім'я:" %>
+		<%= f.text_field :title, :maxlength => 20, :class=>'blog', :style=>'width:347px;' %><br/>
+	<% end %>
+	<%= f.hidden_field :commentable_type, :value => model.type %>
+	<%= f.hidden_field :commentable_id, :value => model.id %>
+	<%= f.hidden_field :user_id, :value => logged_in? ? current_user.id : 0 %>
+	<%= f.text_area :comment, :style=>"width:380px;height:70px" %><br/>
+	<%=submit_tag "Коментувати"%>
+<% end %>

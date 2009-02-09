@@ -1,3 +1,4 @@
+require 'ostruct'
 class Post < ActiveRecord::Base
  validates_presence_of :title, :message => "Обязательное поле"
  validates_presence_of :content, :message => "Обязательное поле"
@@ -10,7 +11,10 @@ class Post < ActiveRecord::Base
  #has_many :comments, :as => :commentable, :dependent => :destroy
  #has_one :access, :as => :accessible, :dependent => :destroy
  acts_as_taggable
- COMMENTS_ACCESS_LEVEL=>["Публічний", "Без Коментарів"]
+ acts_as_commentable
+ POST_ACCESS_LEVEL = [OpenStruct.new(:name=>"Публічний", :status=>0), OpenStruct.new(:name=>"Тільки для своїх", :status=>1)]
+ COMMENTS_ACCESS_LEVEL = [OpenStruct.new(:name=>"Без коментарів", :status=>0), OpenStruct.new(:name=>"Тільки для своїх", :status=>1), OpenStruct.new(:name=>"Публічні", :status=>2)]
+ 
  def to_param
    id.to_s + "-" + slug
  end

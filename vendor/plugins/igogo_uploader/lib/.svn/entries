@@ -1,0 +1,52 @@
+8
+
+dir
+3588
+svn://frendid-web.brainberry.com.ua/frendid_com/vendor/plugins/igogo_uploader/lib
+svn://frendid-web.brainberry.com.ua
+
+
+
+2008-12-03T10:53:00.823982Z
+3460
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+94409d5f-52c0-4372-a4fa-56ddde109ce3
+
+igogo_uploader_helper.rb
+file
+
+
+
+
+2008-12-03T10:51:29.000000Z
+62e3810e8c62f9e732f535172761962d
+2008-12-03T10:53:00.823982Z
+3460
+tih
+
+igogo_uploader.rb
+file
+
+
+
+
+2008-11-27T16:43:44.000000Z
+5f3b99b8ebe8c232946d9edf09c66d49
+2008-12-01T13:26:05.379845Z
+3384
+tih
+

@@ -1,0 +1,5 @@
+<%render :layout => "manage/includes/boxDarkGray", :locals=>{:title=>"РЕДАГУВАТИ ПРОФІЛЬ"} do %>
+	<% form_for :user, :url => manage_user_path(@user), :html => {:method=>:put, :multipart=>true} do |f| -%>
+		<%=render :partial => "form", :locals => { :f => f }%>
+	<% end %>
+<%end%>

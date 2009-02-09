@@ -51,7 +51,27 @@ module AuthenticatedSystem
     def login_required
       authorized? || access_denied
     end
-
+    def admin_required
+      login_required && current_user.admin? ? true : access_denied
+    end
+    def moderator_required
+      login_required && current_user.moderator? ? true : access_denied
+    end
+    def producer_required
+      login_required && current_user.producer? ? true : access_denied
+    end
+    def editor_required
+      login_required && current_user.editor? ? true : access_denied
+    end
+    def admin_or_self_idintification_required(user)
+      login_required && (current_user.admin? || user.id==current_user.id) ? true : access_denied
+    end
+    def producer_or_my_content_required(obj)
+      login_required && (current_user.producer? || obj.user_id==current_user.id) ? true : access_denied
+    end
+    def close_access
+      access_denied
+    end
     # Redirect as appropriate when an access request fails.
     #
     # The default action is to redirect to the login screen.

@@ -1,0 +1,4 @@
+module RulesSystem
+protected
+
+end

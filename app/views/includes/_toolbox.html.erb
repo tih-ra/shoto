@@ -2,7 +2,16 @@
     <b class="r5"></b><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b>
 	<div class="inner-box">
 		<ul class="mngr">
-			<li><%=link_to "бгол", new_manage_post_path, :class=>"mngr"%></li>
+			<li><%=link_to "профіль", edit_manage_user_path(current_user.id), :class=>"mngr"%></li>
+			<% producer_content 'li' do %>
+				<%=link_to "користувачі", manage_users_path, :class=>"mngr"%>
+			<% end %>
+			<% editor_content 'li' do %>
+				<%=link_to "бгол", manage_posts_path, :class=>"mngr"%>
+			<% end %>
+			<% producer_content 'li' do %>
+				<%=link_to "послуги", manage_services_path, :class=>"mngr"%>
+			<% end %>
 			<li><%=link_to "альбоми", manage_albums_path, :class=>"mngr"%></li>
 			<li><%=link_to "відео", manage_videos_path, :class=>"mngr"%></li>
 			<li><%=link_to "проекти", manage_events_path, :class=>"mngr"%></li>

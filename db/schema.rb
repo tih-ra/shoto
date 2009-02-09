@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 14) do
+ActiveRecord::Schema.define(:version => 20090209090100) do
 
   create_table "albums", :force => true do |t|
     t.string   "title"
@@ -38,12 +38,37 @@ ActiveRecord::Schema.define(:version => 14) do
     t.datetime "updated_at"
   end
 
+  create_table "avatars", :force => true do |t|
+    t.integer  "parent_id"
+    t.string   "content_type"
+    t.string   "filename"
+    t.string   "thumbnail"
+    t.integer  "size"
+    t.integer  "width"
+    t.integer  "height"
+    t.string   "type"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "banners", :force => true do |t|
     t.string   "title"
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "comments", :force => true do |t|
+    t.string   "title",            :limit => 50, :default => ""
+    t.text     "comment"
+    t.datetime "created_at",                                     :null => false
+    t.integer  "commentable_id",                 :default => 0,  :null => false
+    t.string   "commentable_type", :limit => 15, :default => "", :null => false
+    t.integer  "user_id",                        :default => 0,  :null => false
+  end
+
+  add_index "comments", ["user_id"], :name => "fk_comments_user"
 
   create_table "events", :force => true do |t|
     t.string   "title"
@@ -82,11 +107,35 @@ ActiveRecord::Schema.define(:version => 14) do
     t.string   "title"
     t.string   "slug"
     t.text     "content"
-    t.boolean  "is_public",  :default => true
+    t.boolean  "is_public",      :default => true
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "is_top",     :default => false
-    t.boolean  "is_video",   :default => false
+    t.boolean  "is_top",         :default => false
+    t.boolean  "is_video",       :default => false
+    t.integer  "comment_status", :default => 0
+    t.integer  "access_level",   :default => 0
+  end
+
+  create_table "roles", :force => true do |t|
+    t.string   "name"
+    t.string   "ident"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "roles_users", :id => false, :force => true do |t|
+    t.integer "user_id"
+    t.integer "role_id"
+  end
+
+  add_index "roles_users", ["role_id"], :name => "index_roles_users_on_role_id"
+  add_index "roles_users", ["user_id"], :name => "index_roles_users_on_user_id"
+
+  create_table "services", :force => true do |t|
+    t.integer  "category"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "taggings", :force => true do |t|
@@ -104,7 +153,6 @@ ActiveRecord::Schema.define(:version => 14) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "login"
     t.string   "email"
     t.string   "crypted_password",          :limit => 40
     t.string   "salt",                      :limit => 40
@@ -112,6 +160,12 @@ ActiveRecord::Schema.define(:version => 14) do
     t.datetime "updated_at"
     t.string   "remember_token"
     t.datetime "remember_token_expires_at"
+    t.string   "firstname"
+    t.string   "lastname"
+    t.date     "birthdate"
+    t.string   "mobilephone"
+    t.string   "homephone"
+    t.string   "messanger"
   end
 
 end

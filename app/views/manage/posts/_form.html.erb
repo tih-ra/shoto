@@ -1,6 +1,8 @@
 	<label for="post_title">Заголовок</label><br/>
 	<%= f.text_field :title, :class=>"blog" %>
-	<%=link_to image_tag("icons/photo.png", :class=>"icon"), '#'%>
+	<%=igogo_upload_file current_user.id, {:button_image_url=>"/stylesheets/igogo_uploader/funny-select.png"}%>
+	
+	<%#=link_to image_tag("icons/photo.png", :class=>"icon"), igogo_uploader_path, :title=>"Добавити фото", :onclick=>"Modalbox.show(this.href, {title: this.title, width: 600, height:300}); return false;"%>
 	<div class="clear"><!--IE--></div>
 	<label for="post_content">Зміст</label>
 	<%= f.text_area :content, :class=>'blog' %>
@@ -9,6 +11,10 @@
 	<%= f.text_field :tag_list, :class=>'blog', :style=>'width:460px;' %><br/><br/>
 	<label for="post_title">в Achtung :</label>
 	<%= f.check_box :is_top %><br/>
+	<label for="post_title">Перегляд:</label>
+	<%=f.collection_select(:access_level, Post::POST_ACCESS_LEVEL, :status, :name) %>  |
+	<label for="post_title">Кому дозволено коментувати:</label>
+	<%=f.collection_select(:comment_status, Post::COMMENTS_ACCESS_LEVEL, :status, :name) %>  |  
 	<label for="post_title">Публікувати? :</label>
 	<%= f.check_box :is_public %><br/>
 		

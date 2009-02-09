@@ -1,0 +1,7 @@
+<%render :layout => "manage/includes/boxDarkGray", :locals=>{:title=>"КОРИСТУВАЧІ"} do %>
+	<% admin_content do %>
+		<%=link_to("новий користувач", new_manage_user_path, :class=>"manage_linkks")%>
+		<div class="clear-10">&nbsp;</div>
+	<% end %>
+	<%=render :partial=>"user", :collection => @users%>
+<% end %>

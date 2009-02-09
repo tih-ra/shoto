@@ -1,7 +1,8 @@
 <div>
-	<%=tih_date(post.created_at, "float:left;padding-right:10px;")%>  <h1 class="title_main"><%=link_to post.title, post_path(post), :class=>"title_main"%></h1>
+	<%=logged_in? ? avatar_from_nested(post) : tih_date(post.created_at, "float:left;padding-right:10px;", 1)%>
+	<h1 class="title_main"><%=link_to post.title, post_path(post), :class=>"title_main"%></h1>
+	<div class="clear">&nbsp;</div>
 		<%unless post.tag_list.empty?%>
-			
 			<div class="tagsContent">
 			<% post.tag_counts.each do |tag| %>
 				<%= link_to tag.name, { :controller=>:posts, :action => :tag, :id => tag.name } %>
@@ -9,6 +10,10 @@
 			</div>
 		<% end %>
 </div>
+<div class="clear">&nbsp;</div>
+<% my_or_producer_content post, 'div', 'buttons_right' do %>
+	<%=admin_buttons(edit_manage_post_path(post), manage_post_path(post))%>
+<% end %>
 <div class="blog_content" style="padding:0; margin:0;">
 	<% if extendet%>
 		<%=white_list(Hpricot(post.content.gsub(/&amp;/, '&')).to_html)  %>

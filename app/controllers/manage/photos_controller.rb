@@ -1,9 +1,10 @@
 require 'RMagick'
 class Manage::PhotosController < ApplicationController
-
+  session :cookie_only => false, :only => :create
+  protect_from_forgery :only => [:update, :destroy] 
   before_filter :find_photo, :only => [:show, :edit, :update, :destroy]
-    
-  before_filter :login_required, :except => [:create]
+  
+  #before_filter :login_required
   
   def edit
     respond_to do |format|
@@ -38,7 +39,7 @@ class Manage::PhotosController < ApplicationController
       photo.assetable_id = params[:assetable_id]
       photo.user_id = params[:user_id]
       photo.save!
-      render :text => "["+photo.public_filename(:middle)+"]["+photo.public_filename(:content)+"]["+photo.id.to_s+"]"
+      render :text => photo.public_filename(:content)
       #render :nothing => true
     end
 
@@ -54,9 +55,10 @@ class Manage::PhotosController < ApplicationController
   def find_photo
     @photo = Photo.find(params[:id])
   end
-  
+=begin  
   def authorized?
      ['index', 'new', 'create', 'update', 'destroy'].include?(action_name) || 
      (['edit', 'update', 'destroy', 'show'].include?(action_name) && (current_user == @photo.user || admin?))
    end
+=end
 end

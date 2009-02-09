@@ -1,0 +1,42 @@
+8
+
+dir
+3588
+svn://frendid-web.brainberry.com.ua/frendid_com/public/javascripts/igogo_uploader/swfupload
+svn://frendid-web.brainberry.com.ua
+
+
+
+2008-12-01T13:26:05.379845Z
+3384
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+swfupload.js
+file
+
+
+
+
+2008-10-30T06:54:46.000000Z
+a9a19de90d6bd0058918f2fa5fed9569
+2008-12-01T13:26:05.379845Z
+3384
+tih
+has-props
+
+swfupload.swf
+file
+
+
+
+
+2008-10-30T06:54:48.000000Z
+758c0891789a68b465da91f9034a3ec0
+2008-12-01T13:26:05.379845Z
+3384
+tih
+has-props
+
