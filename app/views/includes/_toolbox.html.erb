@@ -7,16 +7,20 @@
 				<%=link_to "користувачі", manage_users_path, :class=>"mngr"%>
 			<% end %>
 			<% editor_content 'li' do %>
-				<%=link_to "бгол", manage_posts_path, :class=>"mngr"%>
+				<%=link_to "блог", manage_posts_path, :class=>"mngr"%>
 			<% end %>
 			<% producer_content 'li' do %>
 				<%=link_to "послуги", manage_services_path, :class=>"mngr"%>
 			<% end %>
-			<li><%=link_to "альбоми", manage_albums_path, :class=>"mngr"%></li>
-			<li><%=link_to "відео", manage_videos_path, :class=>"mngr"%></li>
-			<li><%=link_to "проекти", manage_events_path, :class=>"mngr"%></li>
-			<li><%=link_to "banners", manage_banners_path, :class=>"mngr"%></li>
-			<li><%=link_to "про_нас", edit_manage_personal_info_path, :class=>"mngr"%></li>
+			<!--li><%#=link_to "альбоми", manage_albums_path, :class=>"mngr"%></li>
+			<li><%#=link_to "відео", manage_videos_path, :class=>"mngr"%></li>
+			<li><%#=link_to "проекти", manage_events_path, :class=>"mngr"%></li-->
+			<%# moderator_content 'li' do %>
+				<%#=link_to "banners", manage_banners_path, :class=>"mngr"%>
+			<%# end %>
+			<% moderator_content 'li' do %>
+				<%=link_to "про_нас", edit_manage_personal_info_path, :class=>"mngr"%>
+			<% end %>
 		</ul>
 	</div>
 	<b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b><b class="r5"></b>

@@ -49,6 +49,7 @@ ActionController::Routing::Routes.draw do |map|
     manage.resources :albums
     manage.resources :photos
     manage.resources :services
+    manage.resources :projects
     manage.resources :videos
     manage.resources :events
     manage.resources :banners

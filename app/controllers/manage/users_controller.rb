@@ -30,6 +30,7 @@ class Manage::UsersController < Manage::MainController
   def update
     @user = User.find(params[:id])
     @user.update_attributes(params[:user])
+    if params[:avatar][:uploaded_data]!=""
     if @user.avatar 
       @user.avatar.update_attributes(params[:avatar])
       @user.avatar.save!
@@ -37,6 +38,7 @@ class Manage::UsersController < Manage::MainController
       avatar = Avatar.new(params[:avatar])
       avatar.user = @user
       avatar.save!
+    end
     end
     @user.save!
     redirect_to :back

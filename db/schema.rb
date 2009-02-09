@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(:version => 20090209090100) do
 
   create_table "comments", :force => true do |t|
     t.string   "title",            :limit => 50, :default => ""
-    t.text     "comment"
+    t.text     "comment",                        :default => ""
     t.datetime "created_at",                                     :null => false
     t.integer  "commentable_id",                 :default => 0,  :null => false
     t.string   "commentable_type", :limit => 15, :default => "", :null => false
@@ -115,6 +115,14 @@ ActiveRecord::Schema.define(:version => 20090209090100) do
     t.integer  "comment_status", :default => 0
     t.integer  "access_level",   :default => 0
   end
+
+  create_table "projects_users", :id => false, :force => true do |t|
+    t.integer "user_id"
+    t.integer "project_id"
+  end
+
+  add_index "projects_users", ["project_id"], :name => "index_projects_users_on_project_id"
+  add_index "projects_users", ["user_id"], :name => "index_projects_users_on_user_id"
 
   create_table "roles", :force => true do |t|
     t.string   "name"

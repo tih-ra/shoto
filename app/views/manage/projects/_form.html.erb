@@ -1,0 +1,20 @@
+<%= f.label :title, "Назва проекту:" %><br/>
+<%= f.text_field :title, :class=>'blog', :style=>'width:560px;' %><br/>
+<%= f.label :start_at, "Початок:" %>
+<%= f.date_select :start_at, :start_year=>Date.today.year %>   |     
+<%= f.label :finish_at, "Deadline:" %>
+<%= f.date_select :finish_at, :start_year=>Date.today.year %><br/>
+<%= f.label :description, "Зміст:" %>
+<%= f.text_area :description, :class=>'blog' %>
+
+<%= f.label :first_name, "Учасники проекту:" %><br/>
+	<ul>
+	<% for user in User.all %>
+		<li>
+			<%= check_box_tag "project[user_ids][]", user.id, @project.users.include?(user) %>
+			<%= "#{user.firstname} #{user.lastname}" %>
+		</li>
+	<% end %>
+	<ul/>
+<div class="clear-10">&nbsp;</div>
+<%= submit_tag "Зберегти", :class=>"submit" %>
