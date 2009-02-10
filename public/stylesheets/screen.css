@@ -201,6 +201,9 @@ div.blog_content img {
 	float: none;
 	clear: both;
 }
+div.blog_content p {
+	clear: both;
+}
 .r5 {margin: 0 5px;}
 .r4 {margin: 0 3px;}
 .r3 {margin: 0 2px;}
