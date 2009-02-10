@@ -9,7 +9,7 @@
 		<div style="padding:10px;">
 		<%=tih_date(project.created_at, "float:left;padding-right:10px;width:80px", 1)%>
 		<div id="manage_event_item">
-			<span class="title_list"><%=project.title%></span>
+			<span class="title_list"><%=link_to project.title, manage_project_path(project), :class=>'title_list'%></span><br/>
 			<div class="milestone_container">
 				<div class="milestone_start"><%=project.start_at.to_s(:onlydate)%></div>
 				<div class="milestone_finish"><%=project.finish_at.to_s(:onlydate)%></div>

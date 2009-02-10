@@ -1,0 +1,21 @@
+<% tabs.each do |tab|%>
+<!--BLOCK START-->
+<div class="boxLightGray" style="width:100px;float:left;">
+	<b class="rl5"></b><b class="rl4"></b><b class="rl3"></b><b class="rl2"></b><b class="rl1"></b>
+	<div class="inner-boxl" style="padding:<%=padding ||= ''%>">
+		<%=tab.title%>
+	</div>
+</div>
+<!--//BLOCK END-->
+<% end %>
+<div class="clear"></div>
+<!--BLOCK START-->
+<div class="boxLightGray" style="width:<%=widht ||= ''%>">
+	<div class="inner-boxl" style="padding:<%=padding ||= ''%>">
+		<!--//BLOCK START-->
+			<%=yield%>
+		<!--BLOCK END-->
+	</div>
+	<b class="rl1"></b><b class="rl2"></b><b class="rl3"></b><b class="rl4"></b><b class="rl5"></b>
+</div>
+<!--//BLOCK END-->

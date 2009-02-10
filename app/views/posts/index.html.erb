@@ -1,16 +1,11 @@
-<div class="column span-15 first">
-<div class="column span-15 first last">
-	<div class="column span-9"><%=will_paginate @posts%>&nbsp;</div>
+<div class="column span-17 first">
+<div class="column span-17 first last">
+	<div class="column span-11"><%=will_paginate @posts%>&nbsp;</div>
 </div>
-<% if @event%>
-<div class="clear-1">&nbsp;</div>
-<%=render :partial => "event_info"%>
-<div class="clear-10">&nbsp;</div>
-<% end %>
 <div class="clear-1">&nbsp;</div>
 <%=render :partial => "posts/post", :collection => @posts, :locals=>{:extendet=>false}%>
 </div>
-<div class="column span-8 last">
+<div class="column span-6 last">
 	<%=render :partial => "includes/banner"%>
 	<div class="clear-10">&nbsp;</div>
 	<%#=render :partial => "includes/events"%>

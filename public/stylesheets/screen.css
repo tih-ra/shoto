@@ -2,16 +2,22 @@ h3.light {
 	color: #5c5652;
 }
 body {
-	background-color: #000000;
+	background: #ebebeb url(/images/bt_bg/bottom_bg.gif) repeat-x 0 bottom;
 	font-family: Helvetica;
 }
+#underheader {
+	background: url(/images/bt_bg/top_bg.gif) repeat-x 0 top;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	margin-bottom: -277px;
+}
 #head {
-	height: 126px;
-	background: url(/images/shotofilms/header.gif);
+	height: 130px;
+	
 }
 #footer {
 	height: 250px;
-	background: url(/images/shotofilms/footer.gif);
 }
 .menu_item {
 	text-decoration: none;
@@ -22,6 +28,55 @@ body {
 }
 div.admin_buttons img {
 	padding-left: 5px;
+}
+div.gr_box {
+	height: 216px;
+}
+div.gr_box > h1.gr_title {
+	font-size: 46px;
+	font-weight: bold;
+	color: #000000;
+	padding: 90px 0 0 40px;
+	
+}
+div.works_icons_box {
+   float: left;
+   padding-left: 30px;
+}
+div.work_icons {
+	widows: 200px;
+	padding-bottom: 10px;
+	float: left;
+	text-align: left;
+	padding-right: 50px;
+}
+div.work_icons span.info {
+	color: #5b5b5b;
+	font-size: 11px;
+}
+a.works_list {
+	color: #5b5b5b;
+	font-size: 16px;
+}
+span.works_list {
+	color: #5b5b5b;
+	font-size: 16px;
+	font-weight: bold;
+}
+div.work_icons span.title {
+	color: #000000;
+	font-size: 16px;
+	font-weight: bold;
+}
+div.services_icons {
+	width: 300px;
+	padding-bottom: 50px;
+	float: left;
+	text-align: center;
+}
+div.services_icons_box{
+	float: left;
+	padding-left: 30px;
 }
 div.list {
  width: 700px;
@@ -38,12 +93,13 @@ div.list span.micro i {
 	color: #5b5b5b;
 	font-size: 11px;
 }
-div.list span.title {
+
+div.list span.title, div.simple_info span.title{
 	color: #494949;
 	font-size: 16px;
 
 }
-div.list a.micro {
+div.list a.micro, div.simple_info a.micro{
 	color: #3a3a3a;
 	font-size: 11px;
 }
@@ -62,6 +118,7 @@ div.avatar_from_nested .info{
 	color: #a9a9a9;
 	font-size: 16px;
 }
+
 div.buttons_right {
 	float: right
 }
@@ -70,7 +127,7 @@ div.about_title {
 	margin: 50px 0 0 35px;
 }
 #main_container {
-	background:#f1f1f1;
+	
 }
 #main_p {
 	margin-left: 15px;
@@ -323,6 +380,11 @@ a.title_main:hover {
 a.mngr {
 	font-size: 14px;
 	color: #474747;
+}
+a.mngrplus {
+	font-size: 14px;
+	color: #363636;
+	font-weight: bold;
 }
 span.contacts {
 	font-size: 44px;

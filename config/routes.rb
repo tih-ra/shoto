@@ -8,7 +8,10 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :posts
   map.resources :events
   map.resources :comments
+  map.resources :ourservices
   map.resource :contacts
+  map.resources :works
+  map.resources :abouts
   map.resource :freeze_frames
   map.resource :photo_art, :controller=>'photo_art'
   map.resource :videos
@@ -54,6 +57,7 @@ ActionController::Routing::Routes.draw do |map|
     manage.resources :events
     manage.resources :banners
     manage.resources :users
+    manage.resources :works
     manage.resource :personal_info
   end
   # Install the default routes as the lowest priority.

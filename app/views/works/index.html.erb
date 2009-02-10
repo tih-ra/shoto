@@ -1,0 +1,15 @@
+<div class="column span-24 first last">
+	<div class="gr_box" style="background:url(/images/services_circle.gif) no-repeat left">
+		<h1 class="gr_title">Роботи</h1>
+	</div>
+	<div class="clear-10">&nbsp;</div>
+	<div class="works_icons_box">
+	<% @works.each do |w|%>
+		<div class="work_icons">
+			<%=link_to image_tag(w.work_photo.public_filename, :style=>"padding:0;margin:0"), work_path(w)%><br/>
+			<span class="title"><%=w.title%></span><br/>
+			<span class="info"><%=w.category%></span><br/>
+		</div>
+	<% end %>
+	</div>
+</div>

@@ -15,6 +15,6 @@ class PostsController < ApplicationController
   end
   private
   def default_conditions
-    @default_conditions = "is_public=1 #{!logged_in? ? 'AND access_level=0' : ''}"
+    @default_conditions = {:is_public=>true}#"is_public = 1 #{!logged_in? ? 'AND access_level=0' : ''}"
   end
 end

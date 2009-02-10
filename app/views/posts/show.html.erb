@@ -1,4 +1,4 @@
-<div class="column span-15 first">
+<div class="column span-17 first">
 <div class="clear-1">&nbsp;</div>
 <%=render :partial => "posts/post", :object => @post, :locals=>{:extendet=>true}%>
 <% comments_area @post do %>
@@ -7,7 +7,7 @@
 <% end %>
 </div>
 
-<div class="column span-8 last">
+<div class="column span-6 last">
 	<%=render :partial => "includes/banner"%>
 	<div class="clear-10">&nbsp;</div>
 	<%=render :partial => "includes/top_posts"%>

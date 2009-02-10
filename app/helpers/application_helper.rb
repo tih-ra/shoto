@@ -59,8 +59,8 @@ module ApplicationHelper
     end
   end
   
-  def avatar(user)
-    image_tag((user.avatar.nil? ? '/images/default_avatar.gif' : user.avatar.public_filename), :class=>"avatar")
+  def avatar(user, size=60)
+    image_tag((user.avatar.nil? ? '/images/default_avatar.gif' : user.avatar.public_filename), :class=>"avatar", :size=>"#{size}x#{size}")
   end
   def avatar_from_nested(parent)
      
@@ -75,6 +75,14 @@ module ApplicationHelper
       end
       c1
     end
+  end
+  def avatar_with_name(user)
+    content_tag :div, :style=>"width:230px", :class=>"simple_info" do
+  		c1 = content_tag :div, avatar(user, 40), :style=>"width:40px;padding-right:10px;float:left;" 
+  		c1 += content_tag(:span, "#{user.firstname} #{user.lastname}", :class=>"title")+"<br/>"
+  		c1 += mail_to(user.email, user.email, :class=>"micro")+"<br/>"
+  	  c1
+  	end
   end
   
   def public_from_nested(parent)

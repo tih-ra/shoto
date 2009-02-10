@@ -1,0 +1,13 @@
+<div class="column span-24 first last">
+	<div class="gr_box" style="background:url(/images/services_circle.gif) no-repeat left">
+		<h1 class="gr_title"><%=@work.title%></h1>
+	</div>
+	<div class="column span-19 first">
+		<div style="padding-left:40px"><%=@work.content%></div>
+	</div>
+	<div class="column span-4 last">
+		<%Work.all(:order=>"created_at DESC", :limit=>40).each do |work|%>
+			<%=link_to work.title, work_path(work), :class=>'works_list'%><br/>
+		<% end %>
+	</div>
+</div>

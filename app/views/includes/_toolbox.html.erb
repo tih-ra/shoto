@@ -15,12 +15,16 @@
 			<!--li><%#=link_to "альбоми", manage_albums_path, :class=>"mngr"%></li>
 			<li><%#=link_to "відео", manage_videos_path, :class=>"mngr"%></li>
 			<li><%#=link_to "проекти", manage_events_path, :class=>"mngr"%></li-->
-			<%# moderator_content 'li' do %>
-				<%#=link_to "banners", manage_banners_path, :class=>"mngr"%>
-			<%# end %>
+			<% moderator_content 'li' do %>
+				<%=link_to "banners", manage_banners_path, :class=>"mngr"%>
+			<% end %>
 			<% moderator_content 'li' do %>
 				<%=link_to "про_нас", edit_manage_personal_info_path, :class=>"mngr"%>
 			<% end %>
+			<% producer_content 'li' do %>
+				<%=link_to "роботи", manage_works_path, :class=>"mngr"%>
+			<% end %>
+			<li><%=link_to "проекти", manage_projects_path, :class=>"mngrplus"%></li>
 		</ul>
 	</div>
 	<b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b><b class="r5"></b>

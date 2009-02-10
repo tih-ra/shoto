@@ -15,10 +15,11 @@ class Manage::UsersController < Manage::MainController
   def create
     @user = User.new(params[:user])
     @user.save!
-    avatar = Avatar.new(params[:avatar])
-    avatar.user = @user
-    avatar.save!
-    
+    if params[:avatar][:uploaded_data]!=""
+     avatar = Avatar.new(params[:avatar])
+     avatar.user = @user
+     avatar.save!
+    end
     redirect_to manage_users_path
     
     rescue ActiveRecord::RecordInvalid

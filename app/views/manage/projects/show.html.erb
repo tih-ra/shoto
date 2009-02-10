@@ -1,0 +1,18 @@
+<%render :layout => "manage/includes/boxDarkGray", :locals=>{:title=>"#{@project.title}"} do %>
+	<%=render :partial=> "project", :locals => {:project=>@project}%>
+	<div class="clear-10">&nbsp;</div>
+	<div class="column span-14 first">
+		<%render :layout => "manage/includes/boxLightGray_without_top", :locals=>{:padding=>"5px", :tabs=>@tabs} do %>
+			test
+		<% end %>
+	</div>
+	<div class="column span-5 last">
+		<%render :layout => "manage/includes/boxLightGray", :locals=>{:padding=>"5px"} do %>
+			<% @project.users.each do |user| %>
+			 	<%=avatar_with_name(user)%>
+			   <div class="clear">&nbsp;</div>
+			<% end %>
+		<% end %>
+	</div>
+	
+<%end%>

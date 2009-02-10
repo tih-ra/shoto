@@ -1,7 +1,9 @@
 require 'RMagick'
+require 'ostruct'
 include ActionView::Helpers::DateHelper 
 class Manage::ProjectsController < Manage::MainController
   before_filter :find_project, :only=>[:edit, :update, :show]
+  before_filter :set_tabs, :only=>[:show]
   before_filter :moderator_required, :only=>[:create, :update, :destroy, :edit, :new]
   configure_igogo_uploader(:options=>{:upload_url=>"/manage/photos", :post_file_name=>"Filedata"})
   uses_tiny_mce(:options => {:theme => 'advanced',
@@ -46,6 +48,9 @@ class Manage::ProjectsController < Manage::MainController
   end
   def find_project
     @project = Project.find(params[:id])
+  end
+  def set_tabs
+    @tabs = [OpenStruct.new(:title=>"Tasks", :link=>''), OpenStruct.new(:title=>"Файли", :link=>''), OpenStruct.new(:title=>"Обговорення", :link=>'')]
   end
   def create_milestone_image
     milestone_days = distance_of_time_in_words(@project.start_at, @project.finish_at).to_i

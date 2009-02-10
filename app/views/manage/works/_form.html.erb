@@ -1,0 +1,20 @@
+<label for="post_title">Заголовок</label><br/>
+<%= f.text_field :title, :class=>"blog" %>
+<%=igogo_upload_file current_user.id, {:button_image_url=>"/stylesheets/igogo_uploader/funny-select.png"}%>
+
+<div class="clear"><!--IE--></div>
+<%= f.label :first_name, "Зображення:" %><br/>
+<%=@work.work_photo.nil? ? '' : image_tag(@work.work_photo.public_filename)%>
+<%= file_field 'work_photo', 'uploaded_data' %><br/><br/>
+
+<label for="post_content">Зміст</label>
+<%= f.text_area :content, :class=>'blog' %>
+<div class="clear"><!--IE--></div>
+<label for="post_title">Опис (брендінг для компаниї...)</label><br/>
+<%= f.text_field :category, :class=>"blog" %><br/>
+<label for="post_content">Теги<small>(вносятся через кому)</small>:</label><br/>
+<%= f.text_field :tag_list, :class=>'blog', :style=>'width:460px;' %><br/><br/>
+
+	
+<div class="clear-10">&nbsp;</div>
+<%= submit_tag "Зберегти", :class=>"submit" %>

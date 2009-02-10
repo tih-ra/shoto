@@ -1,0 +1,5 @@
+<%render :layout => "manage/includes/boxDarkGray", :locals=>{:title=>"СТВОРИТИ ЗВІТ"} do %>
+	<% form_for :work, :url => manage_works_path, :html=>{:multipart=>true} do |f| -%>
+		<%=render :partial => "form", :locals=>{:f=>f}%>
+	<% end %>
+<%end%>

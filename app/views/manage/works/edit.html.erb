@@ -1,0 +1,5 @@
+<%render :layout => "manage/includes/boxDarkGray", :locals=>{:title=>"РЕДАГУВАТИ @ #{@work.title}"} do %>
+	<% form_for :work, :url => manage_work_path(@work), :html => {:method=>:put, :multipart=>true} do |f| -%>
+		<%=render :partial => "form", :locals=>{:f=>f}%>
+	<% end %>
+<%end%>
