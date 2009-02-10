@@ -173,6 +173,28 @@ a {
 	/* overflow: hidden; */
 	clear: both;
 }
+div.milestone {
+	width: 580px;
+	height: 20px;
+	float: left;
+	border: 1px dashed #9b9b9b;
+}
+div.milestone_container {
+	float: left;
+	width: 580px;
+	height: 30px;
+}
+div.milestone_container > div.milestone_start {
+	font-size: 9px;
+	color: #000000;
+	float: left;
+}
+div.milestone_container > div.milestone_finish {
+	font-size: 9px;
+	color: #000000;
+	float: right;
+}
+
 img.icon {
 	padding: 0 2px 0 0;
 	margin: 0;

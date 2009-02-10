@@ -1,5 +1,5 @@
 <%render :layout => "manage/includes/boxDarkGray", :locals=>{:title=>"СТВОРИТИ ПРОЕКТ"} do %>
-	<% form_for :project, :url => manage_users_path do |f| -%>
+	<% form_for :project, :url => manage_projects_path do |f| -%>
 		<%=render :partial => "form", :locals => { :f => f }%>
 	<% end %>
 <%end%>

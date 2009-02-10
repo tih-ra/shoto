@@ -1,0 +1,31 @@
+<!--BLOCK START-->
+<style>
+.boxLightGray_<%=project.id%> .inner-boxl, .boxLightGray_<%=project.id%> .rl1,  .boxLightGray_<%=project.id%> .rl2, .boxLightGray_<%=project.id%> .rl3, .boxLightGray_<%=project.id%> .rl4, .boxLightGray_<%=project.id%> .rl5 {background-color:#<%=project.color%>;}
+</style>
+<div class="boxLightGray_<%=project.id%>">
+	<b class="rl5"></b><b class="rl4"></b><b class="rl3"></b><b class="rl2"></b><b class="rl1"></b>
+	<div class="inner-boxl">
+		<!--//BLOCK START-->
+		<div style="padding:10px;">
+		<%=tih_date(project.created_at, "float:left;padding-right:10px;width:80px", 1)%>
+		<div id="manage_event_item">
+			<span class="title_list"><%=project.title%></span>
+			<div class="milestone_container">
+				<div class="milestone_start"><%=project.start_at.to_s(:onlydate)%></div>
+				<div class="milestone_finish"><%=project.finish_at.to_s(:onlydate)%></div>
+				<div class="milestone" style="background: url(/milestones/milestone_<%=project.id%>.gif?<%=Time.now.to_i%>)">&nbsp;</div>
+			</div>
+		</div>
+		<div id="manage_event_delete">
+			<% moderator_content 'div' do %>
+				<%=admin_buttons(edit_manage_project_path(project), manage_project_path(project))%>
+			<% end %>
+		</div>
+		</div>
+		<!--BLOCK END-->
+		<div class="clear-10">&nbsp;</div>
+	</div>
+	<b class="rl1"></b><b class="rl2"></b><b class="rl3"></b><b class="rl4"></b><b class="rl5"></b>
+</div>
+<!--//BLOCK END-->
+<div class="clear-10">&nbsp;</div>

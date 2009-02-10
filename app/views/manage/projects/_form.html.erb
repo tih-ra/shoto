@@ -1,12 +1,24 @@
-<%= f.label :title, "Назва проекту:" %><br/>
-<%= f.text_field :title, :class=>'blog', :style=>'width:560px;' %><br/>
+<%= javascript_include_tag 'jscolor/jscolor.js' %>
+
+<label for="post_title">Назва проекту:</label><br/>
+<%= f.text_field :title, :class=>"blog" %>
+<%=igogo_upload_file current_user.id, {:button_image_url=>"/stylesheets/igogo_uploader/funny-select.png"}%>
+
+<div class="clear"><!--IE--></div>
+<%= f.label :color, "Колір:", :style=>"padding-right:19px;" %>
+<%= f.text_field :color, :class=>"color", :style=>"width:50px;" %><br/>
+
 <%= f.label :start_at, "Початок:" %>
-<%= f.date_select :start_at, :start_year=>Date.today.year %>   |     
+<%= f.date_select :start_at, :start_year=>2008 %>   |     
 <%= f.label :finish_at, "Deadline:" %>
-<%= f.date_select :finish_at, :start_year=>Date.today.year %><br/>
+<%= f.date_select :finish_at, :start_year=>2008 %><br/>
+<div style="background:#ffa2a7;width:540px">
+<%= f.label :crytical_date, "Crytical:", :style=>"padding-right:5px;" %>
+<%= f.date_select :crytical_date, :start_year=>2008 %><br/>
+</div>
 <%= f.label :description, "Зміст:" %>
 <%= f.text_area :description, :class=>'blog' %>
-
+<br/>
 <%= f.label :first_name, "Учасники проекту:" %><br/>
 	<ul>
 	<% for user in User.all %>

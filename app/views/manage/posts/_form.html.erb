@@ -4,6 +4,7 @@
 	
 	<%#=link_to image_tag("icons/photo.png", :class=>"icon"), igogo_uploader_path, :title=>"Добавити фото", :onclick=>"Modalbox.show(this.href, {title: this.title, width: 600, height:300}); return false;"%>
 	<div class="clear"><!--IE--></div>
+	
 	<label for="post_content">Зміст</label>
 	<%= f.text_area :content, :class=>'blog' %>
 	<div class="clear"><!--IE--></div>

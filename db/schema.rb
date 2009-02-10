@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090209090100) do
+ActiveRecord::Schema.define(:version => 20090210024240) do
 
   create_table "albums", :force => true do |t|
     t.string   "title"
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(:version => 20090209090100) do
 
   create_table "comments", :force => true do |t|
     t.string   "title",            :limit => 50, :default => ""
-    t.text     "comment",                        :default => ""
+    t.text     "comment"
     t.datetime "created_at",                                     :null => false
     t.integer  "commentable_id",                 :default => 0,  :null => false
     t.string   "commentable_type", :limit => 15, :default => "", :null => false
@@ -114,6 +114,17 @@ ActiveRecord::Schema.define(:version => 20090209090100) do
     t.boolean  "is_video",       :default => false
     t.integer  "comment_status", :default => 0
     t.integer  "access_level",   :default => 0
+  end
+
+  create_table "projects", :force => true do |t|
+    t.string   "title"
+    t.string   "color"
+    t.date     "start_at"
+    t.date     "finish_at"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.date     "crytical_date"
   end
 
   create_table "projects_users", :id => false, :force => true do |t|
