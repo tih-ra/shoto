@@ -70,6 +70,7 @@ div.work_icons span.title {
 }
 div.services_icons {
 	width: 300px;
+	height: 120px;
 	padding-bottom: 50px;
 	float: left;
 	text-align: center;
@@ -201,7 +202,9 @@ div.blog_content img {
 	float: none;
 	clear: both;
 }
-
+div.blog_content {
+	width: 600px;
+}
 .r5 {margin: 0 5px;}
 .r4 {margin: 0 3px;}
 .r3 {margin: 0 2px;}
