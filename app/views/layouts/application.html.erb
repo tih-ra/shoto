@@ -1,7 +1,26 @@
 <%=render :partial => "includes/header"%>
+
+<div id="wrap">	
+<div id="main" class="clearfix">
+
+<div id="underheader">
+<div class="container">
+	
+<div class="column span-24 first last" id="head">
+	<div class="about_title"><%=link_to image_tag("shotofilms/logo.gif"), "/"%></div>
+	<div class="main_menu">
+		<%=render :partial => "includes/menu"%>
+	</div>
+</div>
+
 <div class="column span-24 first last" id="main_container">
 	<div id="main_p">
 	<%=yield%>
 	</div>
+</div>
+
+</div>
+</div>
+</div>
 </div>
 <%=render :partial => "includes/footer"%>

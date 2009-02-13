@@ -5,27 +5,58 @@ body {
 	background: #ebebeb url(/images/bt_bg/bottom_bg.gif) repeat-x 0 bottom;
 	font-family: Helvetica;
 }
+html, body, #wrap {height: 100%;}
+
+body > #wrap {height: auto; min-height: 100%;
+
+}
+
+#main {padding-bottom: 110px;}  /* must be same  as the footer */
+
+#footer {position: relative;
+	margin-top: 110px; /* negative value of footer height */
+	height: 110px;
+	clear:both;
+}
+#footer_child{
+	
+padding-left: 20px;
+padding-top: 35px;
+}
+div.prativagaz {
+	padding-left: 40px;
+}
+div.gangubas {
+	color: #7a7a7a;
+	line-height: 13px;
+	font-size: 11px;
+}
+div.gangubas > a{
+	
+	color: #474747;
+}
+
 #underheader {
 	background: url(/images/bt_bg/top_bg.gif) repeat-x 0 top;
 	position: absolute;
 	top: 0;
 	width: 100%;
+	height: 251px;
 	margin-bottom: -251px;
 
 }
+
 #head {
 	height: 130px;
 	
 }
-#footer {
-	height: 250px;
-}
+
 .menu_item {
 	text-decoration: none;
 	font-size: 14px;
 	color: #4e4e4e;
 	font-weight: bold;
-	padding-right: 46px;
+	padding-left: 46px;
 }
 div.admin_buttons img {
 	padding-left: 5px;
@@ -33,11 +64,31 @@ div.admin_buttons img {
 div.gr_box {
 	height: 216px;
 }
+div.unitaz {
+	margin-top: -60px;
+}
+div.vodolaz {
+	margin-top: -100px;
+}
+div.pdf_donbas {
+	padding: 69px 0 0 40px;
+	margin-top: -127px;
+	float: right;
+	font-size: 16px;
+	color: #828282;
+}
+div.pdf_donbas > span {
+	margin: 4px 0 -3px 6px;
+}
+div.pdf_donbas a {
+	font-size: 16px;
+	color: #828282;
+}
 div.gr_box > h1.gr_title {
 	font-size: 46px;
 	font-weight: bold;
 	color: #000000;
-	padding: 90px 0 0 40px;
+	padding: 69px 0 0 40px;
 	
 }
 div.works_icons_box {
@@ -126,13 +177,13 @@ div.buttons_right {
 }
 div.about_title {
 	float: left;
-	margin: 50px 0 0 35px;
+	margin: 40px 0 0 40px;
 }
 #main_container {
 	
 }
 #main_p {
-	margin-left: 15px;
+
 }
 div.freeze_frame_thumb {
 	width: 219px;
@@ -147,7 +198,7 @@ hr.cut {
 div.main_menu {
 	float: right;
 	clear: both;
-	margin: -20px 0 0 35px;
+	margin: -33px 0 0 0;
 }
 #manage_video {
 	float: left;
@@ -225,6 +276,8 @@ div.blog_content {
 .clear {clear:both;float:none;}
 .clear-1 {clear:both;float:none;height:1px;line-height:1px;font-size:1px;}
 .clear-10 {clear:both;float:none;height:10px;line-height:10px;font-size:10px;}
+
+.clear-50 {clear:both;float:none;height:50px;line-height:50px;font-size:50px;}
 a {
 	font-size: 12px;
 	color: #474747;
@@ -347,7 +400,6 @@ ul.up li{
 	font-size: 28px;
 	color: #1a1a1a;
 	text-decoration: none;
-	padding-top: 10px;
 }
 div.tagsContent {
 	padding: 0;
@@ -358,6 +410,11 @@ div.tagsContent a {
 	color: #989898;
 	text-decoration: none;
 	font-size: 11px;
+}
+div.micro_date {
+	color: #b8b8b8;
+	font-size: 24px;
+	font-weight: bold;
 }
 div.tagsContent a:hover {
 	color: #4a4a4a;

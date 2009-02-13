@@ -3,10 +3,10 @@
 		<h1 class="gr_title"><%=Service::CETEGORIES.find {|c| c.idn==@our_service.category}.name%></h1>
 	</div>
 	
-	<div class="column span-15 first" style="margin-top:-60px;">
+	<div class="column span-13 first unitaz">
 		<div style="padding-left:40px"><%=@our_service.content%></div>
 	</div>
-	<div class="column span-8 last">
-		<%=image_tag "img_for_services/#{@our_service.category}p.png", :style=>"padding:0;margin:0;"%>
+	<div class="column span-11 last vodolaz" style="text-align:center;">
+		<%=image_tag "img_for_services/#{@our_service.category}p.png", :class=>""%>
 	</div>
 </div>

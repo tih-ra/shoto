@@ -1,13 +1,15 @@
 <div class="column span-24 first last">
 	<div class="gr_box" style="background:url(/images/services_circle.gif) no-repeat left">
-		<h1 class="gr_title">Послуги</h1>
+		<h1 class="gr_title">Послуги</h1><div class="pdf_donbas"><%=image_tag "pdf_ico.gif", :style=>"vertical-align:middle;"%> <span><%=link_to "Завантажити презентацію", "/pdf/shotofilms_presenation.pdf" %></div>
 	</div>
 	<div class="clear-10">&nbsp;</div>
-	<div class="services_icons_box">
-	<% Service::CETEGORIES.each do |c|%>
-		<div class="services_icons">
-			<%=link_to image_tag(c.image, :style=>"padding:0;margin:0"), ourservice_path(c.idn)%>
+	<div class="unitaz">
+		<div class="services_icons_box">
+		<% Service::CETEGORIES.each do |c|%>
+			<div class="services_icons">
+				<%=link_to image_tag(c.image, :style=>"padding:0;margin:0"), ourservice_path(c.idn)%>
+			</div>
+			<% end %>
 		</div>
-	<% end %>
 	</div>
 </div>

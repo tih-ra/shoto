@@ -98,7 +98,11 @@ module ApplicationHelper
       c1
     end
   end
-  
+  def shoto_micro_date obj_date
+    content_tag(:div, :class=>"micro_date") do
+      obj_date.to_s(:onlydate)
+    end
+  end
   def tih_date(obj_date, style='', time=nil)
     content_tag(:div, :class=>"date_block", :style=>style) do
         #c1 = content_tag :span, 'achtung'

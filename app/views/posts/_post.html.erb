@@ -1,14 +1,7 @@
 <div>
-	<%=logged_in? ? avatar_from_nested(post) : tih_date(post.created_at, "float:left;padding-right:10px;", 1)%>
+	<%#=logged_in? ? avatar_from_nested(post) : tih_date(post.created_at, "float:left;padding-right:10px;", 1)%>
+	<%=shoto_micro_date post.created_at%>
 	<h1 class="title_main"><%=link_to post.title, post_path(post), :class=>"title_main"%></h1>
-	<div class="clear">&nbsp;</div>
-		<%unless post.tag_list.empty?%>
-			<div class="tagsContent">
-			<% post.tag_counts.each do |tag| %>
-				<%= link_to tag.name, { :controller=>:posts, :action => :tag, :id => tag.name } %>
-			<% end unless post.tag_list.empty?%>
-			</div>
-		<% end %>
 </div>
 <div class="clear">&nbsp;</div>
 <% my_or_producer_content post, 'div', 'buttons_right' do %>
@@ -21,3 +14,11 @@
 		<%=white_list(cut_text (post.content.gsub(/&amp;/, '&'), post_url(post))) %>
 	<% end %>
 </div>
+<%unless post.tag_list.empty?%>
+	<div class="tagsContent">
+	<% post.tag_counts.each do |tag| %>
+		<%= link_to tag.name, { :controller=>:posts, :action => :tag, :id => tag.name } %>
+	<% end unless post.tag_list.empty?%>
+	</div>
+<% end %>
+<div class="clear-50">&nbsp;</div>
