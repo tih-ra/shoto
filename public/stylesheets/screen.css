@@ -14,7 +14,7 @@ body > #wrap {height: auto; min-height: 100%;
 #main {padding-bottom: 110px;}  /* must be same  as the footer */
 
 #footer {position: relative;
-	margin-top: 251px; /* negative value of footer height */
+	margin-top: 351px; /* negative value of footer height */
 	height: 110px;
 	clear:both;
 }
