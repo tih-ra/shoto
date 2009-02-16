@@ -97,7 +97,7 @@ function Igogo_uploadProgress(file, bytesLoaded, bytesTotal) {
 }
 
 function Igogo_uploadSuccess(file, serverData) {
-	tinyMCE.execCommand('mceInsertContent', false, '<img src='+serverData+'/>');
+	tinyMCE.execCommand('mceInsertContent', false, '<img src='+serverData+'>');
 	$('btnCancel').hide();
 	try {
 		var progress = new Igogo_FileProgress(file, this.customSettings.progressTarget);
