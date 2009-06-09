@@ -1,0 +1,2 @@
+module Manage::SndMsgsHelper
+end

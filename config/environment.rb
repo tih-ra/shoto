@@ -58,3 +58,11 @@ Rails::Initializer.run do |config|
   # Make Active Record use UTC-base instead of local time
   # config.active_record.default_timezone = :utc
 end
+
+ActionMailer::Base.delivery_method = :sendmail
+#require 'rutils'
+#require 'juggernaut'
+ActionMailer::Base.sendmail_settings = {
+  :location => "/usr/sbin/sendmail",
+  :arguments => "-t -fshotoor@aquinas.server0571.info"
+}

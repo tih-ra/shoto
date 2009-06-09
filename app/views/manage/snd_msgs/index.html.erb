@@ -1,0 +1,24 @@
+<%render :layout => "manage/includes/boxDarkGray", :locals=>{:title=>"СТВОРИТИ MAIL"} do %>
+	<% form_for :snd_msg, :url => manage_snd_msgs_path do |f| -%>
+		<label for="post_title">email</label><br/>
+		<%= f.text_field :email, :class=>"blog" %>
+		
+		<div class="clear"><!--IE--></div>
+		<label for="post_title">subject</label><br/>
+		<%= f.text_field :subject, :class=>"blog" %>
+		<div class="clear"><!--IE--></div>
+		
+		<label for="post_content">content</label>
+		<%= f.text_area :content, :class=>'blog' %>
+		<div class="clear"><!--IE--></div>
+		
+		<label for="post_title">counter</label><br/>
+		<%= f.text_field :counter, :class=>"blog" %>
+		<div class="clear"><!--IE--></div>
+		
+		
+		<div class="clear-10">&nbsp;</div>
+		<%= submit_tag "Зберегти", :class=>"submit" %>
+	<% end %>
+<%end%>	
+<div class="clear-10">&nbsp;</div>

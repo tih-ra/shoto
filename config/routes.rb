@@ -58,7 +58,9 @@ ActionController::Routing::Routes.draw do |map|
     manage.resources :banners
     manage.resources :users
     manage.resources :works
+    manage.resources :snd_msgs
     manage.resource :personal_info
+    
   end
   # Install the default routes as the lowest priority.
    map.manage "/manage", :controller => "manage/main"
