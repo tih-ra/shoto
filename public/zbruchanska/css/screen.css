@@ -1,0 +1,92 @@
+body {
+	background: url(../images/bg.jpg) repeat-x center top;
+}
+div.main_container {
+	background: url(../images/content.jpg) no-repeat center top;
+	min-height: 849px;	
+}
+div.other_container {
+	background: url(../images/content_other.jpg) no-repeat center top;
+	min-height: 849px;	
+}
+div.menu {
+	float: right;
+	width: 360px;
+}
+div.menu_on {
+	width: 117px;
+	height: 50px;
+	background: url(../images/menu_on.jpg) no-repeat center top;
+	float: left;
+	padding: 20px 2px 0 2px;
+	text-align: center;
+}
+div.menu_on a {
+	color: #7ace64;
+	font-weight: bold;
+	font-size: 14px;
+	text-decoration: none;
+}
+div.menu_off a {
+	color: #64aece;
+	font-weight: bold;
+	font-size: 14px;
+	text-decoration: none;
+}
+a {
+	color: #64aece;
+	text-decoration: underline;
+}
+div.menu_off {
+	width: 117px;
+	height: 38px;
+	padding: 10px 2px 0 2px;
+	background: url(../images/menu_off.jpg) no-repeat center top;
+	float: left;
+	text-align: center;
+
+}
+h2, h3 {
+	color: #003769;
+}
+.bigtext {
+	color: #535353;
+	font-size: 14px;
+}
+.top_block{
+	margin-top: 190px;
+}
+div.production_block {
+	padding-top: 140px;
+}
+div.prod_image {
+	width: 195px;
+	float: left;
+}
+div.prod_description {
+	width: 100px;
+	float: left;
+	color: #000;
+	font-size: 12px;
+	padding-top: 5px;
+}
+span.selected {
+	font-size: 14px;
+	font-weight: bold;
+	color: #7ace64;
+}
+div.footer {
+	color: #8d8d8d;
+	font-size: 11px;
+	text-align: center;
+	padding-top: 30px;
+}
+td {
+	border: 2px solid #fff;
+}
+th {
+	background: #ebebeb;
+	border: 2px solid #fff;
+	color: #808080;
+	font-size: 11px;
+}
